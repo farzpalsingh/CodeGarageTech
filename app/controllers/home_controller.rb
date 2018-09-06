@@ -12,5 +12,10 @@ class HomeController < ApplicationController
 
 	def project_detail3
 	end
+
+	def seo_service
+	end
 	
+	def about_us
+	end	
 end

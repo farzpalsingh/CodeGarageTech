@@ -50,12 +50,13 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a  href="static.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Careers</a></li>
+                        <li class="nav-item <%= request.path == "/" ? "active" : "" %>"><a class="nav-link" href="<%= root_path%>">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#">Services</a> -->
+                        <!-- </li> -->
+                        <!-- <li class="nav-item"><a  href="static.html">Blog</a></li> -->
+                        <li class="nav-item <%= request.path == "/about-us" ? "active" : "" %>"><a class="nav-link" href="<%= about_us_path%>">About Us</a></li>
+                        <li class="nav-item <%= request.path == "/contact" ? "active" : "" %>"><a class="nav-link" href="<%= contact_path%>">Contact</a></li>
+                        <li class="nav-item <%= request.path == "/careers" ? "active" : "" %>"><a class="nav-link" href="<%= careers_path%>">Careers</a></li>
                     </ul>
                     <!-- <ul class="navbar-nav justify-content-end">
                         <li><a href="#"><i class="icon_search"></i></a></li>
@@ -75,50 +76,45 @@
                         <div class="col-lg-3 col-md-6">
                             <aside class="f_widget subscribe_widget">
                                 <div class="f_w_title">
-                                    <h3>Our Newsletter</h3>
+                                    <h3>About Us</h3>
                                 </div>
-                                <p>Subscribe to our mailing list to get the updates to your email inbox.</p>
-                                <div class="input-group">
+                                <p>We're a first class Ruby on Rails development and consulting organization situated in Mohali India. We’re in business just like you - we know how stressful it can be to work on projects with outside vendors, especially when large budgets are involved.</p>
+                                <!-- <div class="input-group">
                                     <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
                                     <span class="input-group-btn">
                                         <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
                                     </span>
-                                </div>
-                                <ul>
+                                </div> -->
+                                <!-- <ul>
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                </ul>
+                                </ul> -->
                             </aside>
                         </div>
-                        <div class="col-lg-3 col-md-6">
+                        <!-- <div class="col-lg-3 col-md-6">
                             <aside class="f_widget twitter_widget">
                                 <div class="f_w_title">
                                     <h3>Twitter Feed</h3>
                                 </div>
                                 <div class="tweets_feed"></div>
                             </aside>
-                        </div>
+                        </div> -->
                         <div class="col-lg-3 col-md-6">
                             <aside class="f_widget categories_widget">
                                 <div class="f_w_title">
-                                    <h3>Link Categories</h3>
+                                    <h3>What We do</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Agency</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Studio</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Studio</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Blogs</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Shop</a></li>
-                                </ul>
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Home</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Services</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Work</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Privacy</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Ruby on Rails</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Node.js</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Android</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Javascript</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>React</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Bootstrap</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>PHP</a></li>
                                 </ul>
                             </aside>
                         </div>
@@ -127,10 +123,25 @@
                                 <div class="f_w_title">
                                     <h3>Contact Us</h3>
                                 </div>
-                                <a href="#">1 (800) 686-6688</a>
-                                <a href="#">info.deercreative@gmail.com</a>
-                                <p>40 Baria Sreet 133/2 <br />NewYork City, US</p>
-                                <h6>Open hours: 8.00-18.00 Mon-Fri</h6>
+                                <a href="#">0172-5092226</br> +917589103409</a>
+                                <a href="#">info@codegaragetech.com hr@codegaragetech.com</a>
+                                <p> D-185, Prosperity Square </br>
+                                Phase: 8-B, Industrial Area Mohali-160055, Punjab</p>
+                            </aside>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <aside class="f_widget subscribe_widget">
+                                <div class="f_w_title">
+                                    <h3>Check Us on Social Network</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/CodeGarageTech/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/codegaragetech"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://plus.google.com/u/0/102050942109607469627"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="https://in.linkedin.com/company/code-garage-tech/"><i class="fa fa-linkedin"></i></a></li>
+                                    <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                                    <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
+                                </ul>
                             </aside>
                         </div>
                     </div>

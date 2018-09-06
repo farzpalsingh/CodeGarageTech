@@ -1,0 +1,82 @@
+<section class="banner_area">
+    <div class="container">
+        <div class="banner_text_inner">
+            <h4>Careers</h4>
+            <!-- <h5>Tell us about your story and your project.</h5> -->
+        </div>
+    </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Contact Us Area =================-->
+<section class="contact_us_area">
+    <div class="container">
+        <div class="contact_details_inner">
+            <div class="row">
+                <div class="col-lg-10" style="margin: 0 auto;">
+                    <div class="contact_form">
+                        <div class="main_title">
+                            <h2>Career</h2>
+                            <!-- <p>Fill out the form below to recieve a free and confidential.</p> -->
+                        </div>
+                        <form class="contact_us_form row" action="" method="post" id="contactForm">
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="name" name="contact[ First name]" placeholder="First Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="name" name="contact[Last name]" placeholder="Last Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" id="email" name="contact[email]" placeholder="Email" required="required" data-error="Email is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="number" class="form-control" id="phone_number" name="contact[email]" placeholder="Phone Number" required="required" data-error="Email is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="subject" name="job_position" placeholder="Job Position" required="required" data-error="Subject is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="subject" name="job_position" placeholder="Experience" required="required" data-error="Subject is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="subject" name="job_position" placeholder="Current Sallary" required="required" data-error="Subject is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="subject" name="job_position" placeholder="Expected Sallary" required="required" data-error="Subject is required.">
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                                <textarea class="form-control" name="contact[message]" id="message" rows="3" placeholder="Paste Resume Here(Max  6000 Character)" required="required" data-error="Message is required."></textarea>
+                            </div>
+                            
+                            <!-- <div class="form-group col-lg-6"> -->
+                                <div class="col-md-12">
+                                    <label>Upload resume*</label>
+                                </div>
+                                 <div class="col-md-12">
+                                    <input type="file" name="candidate[document]" required="required"  placeholder="Upload resume*">
+                                </div>
+                                </br>
+                                </br>
+                            <!-- </div> -->
+
+                            <div class="form-group col-md-6">
+                                <button type="submit" value="submit" class="btn submit_btn2 form-control">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

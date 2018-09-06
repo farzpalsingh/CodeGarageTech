@@ -1,0 +1,110 @@
+<section class="banner_area">
+    <div class="container">
+        <div class="banner_text_inner">
+            <h4>Contact Us</h4>
+            <h5>Tell us about your story and your project.</h5>
+        </div>
+    </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Contact Us Area =================-->
+<section class="contact_us_area">
+    <div class="container">
+        <!-- <div id="mapBox" class="mapBox row m0"
+            data-lat="1.30921"
+            data-lon="103.8509813"
+            data-zoom="14"
+            data-marker="img/map-marker.png"
+            data-info="Broadway Hotel"
+            data-mlat="1.30921"
+            data-mlon="103.8509813">
+        </div> -->
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=prosperity%20squar%20mohali&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+                <a href="https://www.pureblack.de">homepage erstellen lassen</a>
+            </div>
+            <style>
+                .mapouter{text-align:right;height:500px;width:100%;}
+                .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}
+            </style>
+        </div>
+        <div class="contact_details_inner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact_text">
+                        <div class="main_title">
+                            <h2>Contact Us</h2>
+                            <p>There are many ways to contact us. You may drop us a line, give us a call or send an email, choose what suits you the most.</p>
+                        </div>
+                        <div class="contact_d_list">
+                            <div class="contact_d_list_item">
+                                <h4>Postal address:</h4>
+                                <p>Cabin-2, D-185, Prosperity Square <br /> Phase: 8-B, Industrial Area <br/> Mohali-160055, Punjab</p>
+                            </div>
+
+                            <div class="contact_d_list_item">
+                                <h4>Reg. Office:</h4>
+                                <p>B-33, 358/3C, Boparai Market </br> Jassian Road, Ludhiana, Punjab</p>
+                            </div>
+
+                            <div class="contact_d_list_item">
+                                <h4>Phone</h4>
+                                <a href="#">0172-5092226</a>
+                                <a href="#">+917589103409</a>
+                            </div>
+
+                            <div class="contact_d_list_item">
+                                <h4>Email</h4>
+                                <a href="#">info@codegaragetech.com</a>
+                                <a href="#">hr@codegaragetech.com</a>
+                            </div>
+                            
+
+                        </div>
+                        <div class="static_social">
+                            <div class="main_title">
+                                <h2>Follow Us:</h2>
+                            </div>
+                            <ul>
+                                <li><a href="https://www.facebook.com/CodeGarageTech/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/codegaragetech" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/u/0/102050942109607469627" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://in.linkedin.com/company/code-garage-tech/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact_form">
+                        <div class="main_title">
+                            <h2>Get In Touch With Us!</h2>
+                            <p>Fill out the form below to recieve a free and confidential.</p>
+                        </div>
+                        <form class="contact_us_form row" action="<%=contact_create_path%>" method="post" id="contactForm">
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="text" class="form-control" id="name" name="contact[name]" placeholder="Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="email" class="form-control" id="email" name="contact[email]" placeholder="Email" required="required" data-error="Email is required.">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" id="subject" name="contact[subject]" placeholder="Subject" required="required" data-error="Subject is required.">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <textarea class="form-control" name="contact[message]" id="message" rows="3" placeholder="Message" required="required" data-error="Message is required."></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" value="submit" class="btn submit_btn2 form-control">Send Messages</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
