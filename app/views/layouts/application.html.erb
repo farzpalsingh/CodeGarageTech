@@ -57,6 +57,9 @@
                         <li class="nav-item <%= request.path == "/about-us" ? "active" : "" %>"><a class="nav-link" href="<%= about_us_path%>">About Us</a></li>
                         <li class="nav-item <%= request.path == "/contact" ? "active" : "" %>"><a class="nav-link" href="<%= contact_path%>">Contact</a></li>
                         <li class="nav-item <%= request.path == "/careers" ? "active" : "" %>"><a class="nav-link" href="<%= careers_path%>">Careers</a></li>
+                        <% if current_admin.present?%>
+                            <li class="nav-item"><a class="nav-link" data-method="delete" href="<%=destroy_admin_session_path%>">Logout</a></li>
+                        <% end %>
                     </ul>
                     <!-- <ul class="navbar-nav justify-content-end">
                         <li><a href="#"><i class="icon_search"></i></a></li>
@@ -123,8 +126,10 @@
                                 <div class="f_w_title">
                                     <h3>Contact Us</h3>
                                 </div>
-                                <a href="#">0172-5092226</br> +917589103409</a>
-                                <a href="#">info@codegaragetech.com hr@codegaragetech.com</a>
+                                <a href="javascript:;">0172-5092226</a></br>
+                                <a href="javascript:;">+917589103409</a>
+                                <a href="javascript:;">info@codegaragetech.com</a>
+                                <a href="javascript:;"> hr@codegaragetech.com</a>
                                 <p> D-185, Prosperity Square </br>
                                 Phase: 8-B, Industrial Area Mohali-160055, Punjab</p>
                             </aside>
@@ -135,10 +140,10 @@
                                     <h3>Check Us on Social Network</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="https://www.facebook.com/CodeGarageTech/"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="https://twitter.com/codegaragetech"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://plus.google.com/u/0/102050942109607469627"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="https://in.linkedin.com/company/code-garage-tech/"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/CodeGarageTech/"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/codegaragetech"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a target="_blank" href="https://plus.google.com/u/0/102050942109607469627"><i class="fa fa-google-plus"></i></a></li>
+                                    <!-- <li><a target="_blank" href="https://in.linkedin.com/company/code-garage-tech/"><i class="fa fa-linkedin"></i></a></li> -->
                                     <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
                                     <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
                                 </ul>
@@ -175,6 +180,7 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="assets/jquery-3.2.1.min.js"></script>
+        <script src="assets/application.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/popper.min.js"></script>
         <script src="assets/bootstrap.min.js"></script>
