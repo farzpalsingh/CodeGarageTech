@@ -36,6 +36,7 @@
                 <i class="ti-close"></i>
             </div>
         </section>
+        
         <!--================End Search Area =================-->
 
         <!--================Header Menu Area =================-->
@@ -47,6 +48,7 @@
                     <span></span>
                     <span></span>
                 </button>
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -68,8 +70,13 @@
                 </div>
             </nav>
         </header>
+       
+        
         <!--================End Header Menu Area =================-->
     	<%= yield %>
+        <% if flash[:error] %>
+            <div class="notice"><%= flash[:error] %></div>
+        <% end %>
 
     	<!--================Footer Area =================-->
         <footer class="footer_area">
@@ -140,10 +147,11 @@
                                     <h3>Check Us on Social Network</h3>
                                 </div>
                                 <ul>
+
                                     <li><a target="_blank" href="https://www.facebook.com/CodeGarageTech/"><i class="fa fa-facebook"></i></a></li>
                                     <li><a target="_blank" href="https://twitter.com/codegaragetech"><i class="fa fa-twitter"></i></a></li>
                                     <li><a target="_blank" href="https://plus.google.com/u/0/102050942109607469627"><i class="fa fa-google-plus"></i></a></li>
-                                    <!-- <li><a target="_blank" href="https://in.linkedin.com/company/code-garage-tech/"><i class="fa fa-linkedin"></i></a></li> -->
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/code-garage-tech-252043119/"><i class="fa fa-linkedin"></i></a></li>
                                     <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
                                     <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
                                 </ul>

@@ -1,0 +1,107 @@
+<head>
+    <style type="text/css">
+        .quantity::-webkit-inner-spin-button, 
+        .quantity::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+    </style>
+</head>
+<section class="banner_area">
+    <div class="container">
+        <div class="banner_text_inner">
+            <h4>Careers</h4>
+            <!-- <h5>Tell us about your story and your project.</h5> -->
+        </div>
+    </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Contact Us Area =================-->
+<section class="contact_us_area">
+    <div class="container">
+        <div class="contact_details_inner">
+            <div class="row">
+                <div class="col-lg-10" style="margin: 0 auto;">
+                    <div class="contact_form">
+                        <div class="main_title">
+                            <h2>Career</h2>
+                            <!-- <p>Fill out the form below to recieve a free and confidential.</p> -->
+                        </div>
+                        <form class="contact_us_form row" action="/create_career" method="post" id="contactForm"  enctype="multipart/form-data" novalidate>
+                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                            
+                            <div class="form-group col-lg-6">
+                                <input type="text" value="<%=@career.f_name%>" class="form-control" id="name" name="career[f_name]" placeholder="First Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="text" value="<%=@career.l_name%>" class="form-control" id="name" name="career[l_name]" placeholder="Last Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="email" value="<%=@career.email%>" class="form-control" id="email" name="career[email]" placeholder="Email" required="required" data-error="Email is required.">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="number" value="<%=@career.phn_number%>" class="form-control quantity" id="phone_number" name="career[phn_number]" placeholder="Phone Number" required="required" data-error="Phone number is required." step="1" min="1" maxlength="4"/>
+                               
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                Please select a job position*
+                                <!-- <input type="text" class="form-control" id="subject" name="career[job_position]" placeholder="Job Position" required="required"  > -->
+                                <select class="form-control" name="career[job_position]" required="required" data-error="Please select a job position" style="color:darkgrey">
+                                  <!-- <option hidden >Job Position</option> -->
+                                  <option value="Fresher">Fresher</option>
+                                  <option value="Web Developer" >Web Developer</option>
+                                  <option value="Designer">Designer</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                Your work experience*
+                               <!--  <input type="text" class="form-control" id="subject" name="career[work_experience]" placeholder="Experience" required="required" data-error="Subject is required."> -->
+                                <select class="form-control" name="career[work_experience]" required="required" data-error="Please select a job position" style="color:darkgrey">
+                                  <!-- <option hidden >Work experience</option> -->
+                                  <option value="Fresher">Fresher</option>
+                                  <option value="1-3years" >1-3years</option>
+                                  <option value="3-5years">3-5years</option>
+                                </select>
+
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="number" value="<%=@career.current_salary%>" class="form-control quantity"  id="subject" name="career[current_salary]" placeholder="Current Salary" required="required" data-error="Subject is required." step="1" min="1" maxlength="4">
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <input type="number" value="<%=@career.expected_salary%>" class="form-control quantity"  id="subject" name="career[expected_salary]" placeholder="Expected Salary" required="required" data-error="Subject is required." step="1" min="1" maxlength="4">
+                            </div>
+
+                            <!-- <div class="form-group col-lg-12">
+                                <textarea class="form-control" name="career[resume]" id="message" rows="3" placeholder="Paste Resume Here(Max  6000 Character)" required="required" data-error="Message is required."></textarea>
+                            </div> -->
+                            
+                            <!-- <div class="form-group col-lg-6"> -->
+                                <div class="col-md-12">
+                                    <label>Upload resume*(PDF)</label>
+                                </div>
+                                 <div class="col-md-12">
+                                    <input type="file" name="career[resume_file]" required="required" accept="application/pdf">
+                                </div>
+                                </br>
+                                </br>
+                            <!-- </div> -->
+
+                            <div class="form-group col-md-6">
+                                <button type="submit" value="submit" class="btn submit_btn2 form-control">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
