@@ -18,17 +18,27 @@
         <link href="/assets/layers.css" rel="stylesheet">
         <link href="/assets/navigation.css" rel="stylesheet">
         <link href="/assets/animate.css" rel="stylesheet">
+        <link href="/assets/cog.css" rel="stylesheet">
 
         <!-- Extra plugin css -->
         <link href="/assets/owl.carousel.min.css" rel="stylesheet">
 
         <link href="/assets/style.css" rel="stylesheet">
         <link href="/assets/responsive.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/assets/favi.png" type="image/png">
 	    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   	</head>
 
   	<body>
+       <div class="preloader-wrapper">
+            <div id="loader" class="overlay-loader">
+             <div class="loader-background color-flip"></div>
+              <img class="loader-icon spinning-cog" src="/assets/cog24.svg" data-cog="cog01">
+            </div>
+        </div>
+
+
   	<!--================Search Area =================-->
         <section class="search_area">
             <div class="search_inner">
@@ -41,8 +51,22 @@
 
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
+            <div class="container header-top">
+               <div class="row">
+                 <div class="col-6 top-head-left">
+                 </div>
+                 <div class="col-6 top-head-right">
+                   <ul>
+                     <li><a href="https://www.facebook.com/CodeGarageTech/z" target="_blank" ><i class="fa fa-facebook"></i></a></li>
+                     <li><a href="https://twitter.com/codegaragetech" target="_blank" ><i class="fa fa-twitter"></i></a></li>
+                     <li><a href="https://plus.google.com/u/0/102050942109607469627" target="_blank" ><i class="fa fa-google-plus"></i></a></li>
+                     <li><a href="https://www.linkedin.com/in/code-garage-tech-252043119/" target="_blank" ><i class="fa fa-linkedin"></i></a></li>
+                   </ul>
+                 </div>
+               </div>
+             </div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#" style="width: 131px"><img class="img-responsive" src="/assets/logo1.png" style="max-width: 100%" alt=""></a>
+                <a class="navbar-brand" href="#" style="width: 131px"><img class="img-responsive" src="/assets/logo1.png" style="max-width: 100%;    margin-top: -10px;" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -56,10 +80,13 @@
                         <!-- <li class="nav-item"><a class="nav-link" href="#">Services</a> -->
                         <!-- </li> -->
                         <!-- <li class="nav-item"><a  href="static.html">Blog</a></li> -->
-                        <li class="nav-item <%= request.path == "/about-us" ? "active" : "" %>"><a class="nav-link" href="<%= about_us_path%>">About Us</a></li>
+                        <li class="nav-item <%= request.path == "/about-us" ? "active" : "" %>"><a  href="<%= about_us_path%>">About Us</a></li>
+
                         <li class="nav-item <%= request.path == "/contact" ? "active" : "" %>"><a class="nav-link" href="<%= contact_path%>">Contact</a></li>
                         <li class="nav-item <%= request.path == "/careers" ? "active" : "" %>"><a class="nav-link" href="<%= careers_path%>">Careers</a></li>
+
                         <% if current_admin.present?%>
+                            <li class="nav-item <%= request.path == "/careers" ? "active" : "" %>"><a class="nav-link" href="/portfolios">Portfolios</a></li>
                             <li class="nav-item"><a class="nav-link" data-method="delete" href="<%=destroy_admin_session_path%>">Logout</a></li>
                         <% end %>
                     </ul>
@@ -70,7 +97,7 @@
                 </div>
             </nav>
         </header>
-       
+
         
         <!--================End Header Menu Area =================-->
     	<%= yield %>
@@ -118,6 +145,8 @@
                                     <h3>What We do</h3>
                                 </div>
                                 <ul>
+                                    <li><a href="https://icons8.com">Icon pack by Icons8</a>
+                                    </li>
                                     <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Ruby on Rails</a></li>
                                     <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Node.js</a></li>
                                     <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Android</a></li>
@@ -187,25 +216,28 @@
         <!--================End Footer Area =================-->
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="assets/jquery-3.2.1.min.js"></script>
-        <script src="assets/application.js"></script>
+        <script src="/assets/jquery-3.2.1.min.js"></script>
+        <!-- <script src="/assets/application.js"></script> -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="assets/popper.min.js"></script>
-        <script src="assets/bootstrap.min.js"></script>
+        <script src="/assets/cog-example.js"></script>
+        <script src="/assets/active.js"></script>
+
+        <script src="/assets/popper.min.js"></script>
+        <script src="/assets/bootstrap.min.js"></script>
         <!-- Rev slider js -->
-        <script src="assets/jquery.themepunch.tools.min.js"></script>
-        <script src="assets/jquery.themepunch.revolution.min.js"></script>
-        <script src="assets/revolution.extension.actions.min.js"></script>
-        <script src="assets/revolution.extension.video.min.js"></script>
-        <script src="assets/revolution.extension.slideanims.min.js"></script>
-        <script src="assets/revolution.extension.layeranimation.min.js"></script>
-        <script src="assets/revolution.extension.navigation.min.js"></script>
-        <script src="assets/revolution.extension.slideanims.min.js"></script>
+        <script src="/assets/jquery.themepunch.tools.min.js"></script>
+        <script src="/assets/jquery.themepunch.revolution.min.js"></script>
+        <script src="/assets/revolution.extension.actions.min.js"></script>
+        <script src="/assets/revolution.extension.video.min.js"></script>
+        <script src="/assets/revolution.extension.slideanims.min.js"></script>
+        <script src="/assets/revolution.extension.layeranimation.min.js"></script>
+        <script src="/assets/revolution.extension.navigation.min.js"></script>
+        <script src="/assets/revolution.extension.slideanims.min.js"></script>
         <!-- Extra plugin css -->
-        <script src="assets/jquery.waypoints.min.js"></script>
-        <script src="assets/jquery.counterup.min.js"></script>
-        <script src="assets/apear.js"></script>
-        <script src="assets/countto.js"></script>
+        <script src="/assets/jquery.waypoints.min.js"></script>
+        <script src="/assets/jquery.counterup.min.js"></script>
+        <script src="/assets/apear.js"></script>
+        <script src="/assets/countto.js"></script>
         <script src="/assets/owl.carousel.min.js"></script>
         <script src="/assets/jquery.parallax-1.1.3.js"></script>
         <!--Tweets-->
@@ -213,5 +245,31 @@
         <script src="/assets/script.js"></script>
 
         <script src="/assets/theme.js"></script>
+        <script type="text/javascript">
+            $('.service_item_inner_slider').owlCarousel({
+                loop:true,
+                margin:10,
+                responsiveClass:true,
+                autoplay: true,
+                smartSpeed: 2500,
+                navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                    1000:{
+                        items:3,
+                        nav:true,
+                        loop:true
+                        
+                    }
+                }
+            })
+        </script>
   	</body>
 </html>

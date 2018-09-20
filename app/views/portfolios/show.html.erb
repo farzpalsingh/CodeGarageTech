@@ -1,7 +1,7 @@
 <section class="banner_area">
     <div class="container">
         <div class="banner_text_inner">
-            <h4>UcView</h4>
+            <h4><%= @portfolio.name %></h4>
             <!-- <ul>
                 <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
                 <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Archive</a></li>
@@ -29,15 +29,20 @@
                             </ul>
                         </div> -->
                         <div class="static_img">
-                            <img class="img-fluid" src="/assets/ucview.png" alt="">
+                            <img class="img-fluid" src="<%=@portfolio.photo.url%>" alt="">
+                        </div>
+                        <div class="static_text2">
+                            <h3 style="margin-top: 40px;"><%=@portfolio.area%></h3>
+                            <!-- <p>Duis aute irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p> -->
                         </div>
                         <div class="static_text">
-                            <p>This application is a tool using which user can design his own adds. Application system is attached to display(In Malls and shops) and the adds are being displayed as per the settings by user.</p>
+                            <h3>Description</h3>
+                            <p><%=@portfolio.description%></p>
                             <!-- <p>Duis aute irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p> -->
                         </div>
                         <div class="static_text2">
                             <h3>Technologies</h3>
-                            <p>Rails 4.2, Psql, AngularJs, AJAX, JavaScript, JQuery.</p>
+                            <p><%=@portfolio.technologies%></p>
                         </div>
                         <!-- <div class="media">
                             <div class="d-flex">
@@ -50,7 +55,7 @@
                         </div> -->
                         <div class="static_text2">
                             <h3>Tools</h3>
-                            <p>GIT, Sublime, Firebug.</p>
+                            <p><%=@portfolio.tools%></p>
                             <!-- <p>Duis aute irure Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p> -->
                         </div>
                     </div>

@@ -237,6 +237,10 @@
     .banner_area {
         min-height: auto;
     }
+
+    /* New CSS */
+
+    .header-top{position: absolute;}
 }
 @media(max-width: 575px){
     .c_feature_box {

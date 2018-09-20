@@ -1,0 +1,60 @@
+<section class="banner_area">
+    <div class="container">
+        <div class="banner_text_inner">
+            <h4>Portfolios</h4>
+            <!-- <ul>
+                <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Archive</a></li>
+                <li><a href="static.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Static Page</a></li>
+            </ul> -->
+        </div>
+    </div>
+</section>
+<section class="latest_news_area p_100">
+    <div class="container">
+        <div class="b_center_title">
+            <!-- <h2>Portfolios</h2> -->
+            <!-- <p>We Are A Creative Digital Agency. Focused on Growing Brands Online</p> -->
+        </div>
+        <div class="l_news_inner">
+            <div class="row">
+                <% @portfolios.each do |portfolio|%>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="l_news_item">
+                            <div class="l_news_img"><a href="<%= portfolio_show_path(portfolio.id)%>"><img class="img-fluid" src="<%=portfolio.photo.url%>" alt=""></a></div>
+                            <div class="l_news_content">
+                                <a href="javascript:;"><h4><%=portfolio.name%></h4></a>
+                                <p><%=portfolio.area%></p>
+                                <a class="more_btn" href="<%= portfolio_show_path(portfolio.id)%>">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+
+                
+                <!-- <div class="col-lg-4 col-md-6">
+                    <div class="l_news_item">
+                        <div class="l_news_img"><a href="<%= work_project_detail_welcomeai_path%>"><img class="img-fluid" src="/assets/welcomeai.png" alt=""></a></div>
+                        <div class="l_news_content">
+                            <a href="javascript:;"><h4>Welcome.ai</h4></a>
+                            <p>Artificial Intelligence</p>
+                            <a class="more_btn" href="<%= work_project_detail_welcomeai_path%>">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="l_news_item">
+                        <div class="l_news_img"><a href="<%= work_project_detail_markets_world_path%>"><img class="img-fluid" src="/assets/maketing.png" alt=""></a></div>
+                        <div class="l_news_content">
+                            <a href="javascript:;"><h4>MARKETS WORLD</h4></a>
+                            <p>Marketing</p>
+                            <a class="more_btn" href="<%= work_project_detail_markets_world_path%>">Learn More</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <br>
+            <a class="read_btn" href="/portfolios/new">Create new</a>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,24 @@
+<style type="text/css">
+    .owl-prev {
+        color: white;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 30px;
+    }
+
+    .owl-next {
+        color: white;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 30px;
+    }
+</style>
 <section class="top_slider_area">
-    <div id="" class="rev_slider" style="background: url('/assets/home-slider/slider-1.jpg') no-repeat center center / cover; min-height: 100vh; position: relative;" >
+    <div id="" class="rev_slider" style="background: url('/assets/bg2.jpg') no-repeat center center / cover; min-height: 100vh; position: relative; box-shadow: inset 0 0 0 1000px rgba(35, 29, 29, 0.9)" >
             <!-- MAIN IMAGE -->
 <!--         <img src="/assets/home-slider/slider-1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina> -->
             <!-- LAYER NR. 1 -->
@@ -68,7 +87,7 @@
 <!--================End Creative Feature Area =================-->
 
 <!--================Industries Area =================-->
-<section class="industries_area">
+<!-- <section class="industries_area">
     <div class="left_indus">
         <div class="indus_img">
             <img src="/assets/indus-laptop.png" alt="">
@@ -117,7 +136,7 @@
             <a class="read_btn" href="javascript:;">Work with us</a>
         </div>
     </div>
-</section>
+</section> -->
 <!--================End Industries Area =================-->
 
 <!--================Our Service Area =================-->
@@ -128,27 +147,54 @@
             <!-- <p>We Are A Creative Digital Agency. Focused on Growing Brands Online</p> -->
         </div>
         <div class="row service_item_inner">
-            <div class="col-lg-4">
-                <div class="service_item">
-                    <!-- <i class="ti-ruler-pencil"></i> -->
-                    <img src="/assets/service/2.png" alt="">
-                    <h4>Website Development</h4>
-                    <p>Varied web improvement needs? At Code Garage Tech, we have the experience and aptitude to deal with all! From customized application development, offshore web development services to database management solutions using PHP, ROR, WordPress, Node js, we give full scope With us, you'll unquestionably appreciate the business stage you've generally wanted!</p>
+            <div class="service_item_inner_slider owl-carousel">
+
+                <div class="item">
+                    <div class="service_item">
+                        <!-- <i class="ti-ruler-pencil"></i> -->
+                        <img src="/assets/service/2.png" alt="">
+                        <h4>Web Development</h4>
+                        <p>Varied web improvement needs? At Code Garage Tech, we have the experience and aptitude to deal with all! From customized application development, offshore web development services to database management solutions using PHP, ROR, WordPress, Node js, we give full scope With us, you'll unquestionably appreciate the business stage you've generally wanted!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service_item">
-                    <img src="/assets/service/4.png" alt="">
-                    <h4>App Development</h4>
-                    <p>Code Garage Tech is a leading provider of iPhone applications that takes pride in conveying exceptionally powerful and far-reaching applications, uncommonly custom fitted to cook the requirements of different industry verticals. We are devoted to giving class app designing services in India and are glad to have an immense base of offshore and domestic customers.</p>
+                <div class="item">
+                    <div class="service_item">
+                        <img src="/assets/service/4.png" alt="">
+                        <h4>App Development</h4>
+                        <p>Code Garage Tech is a leading provider of iPhone applications that takes pride in conveying exceptionally powerful and far-reaching applications, uncommonly custom fitted to cook the requirements of different industry verticals. We are devoted to giving class app designing services in India and are glad to have an immense base of offshore and domestic customers.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service_item">
-                    <img src="/assets/service/5.png" alt="">
-                    <h4>SEO Optimization</h4>
-                    <p>Achieve new heights with our unmatched Search Engine Optimization Services. In two decades, Code Garage Tech has delivered an impeccable record as one of the best Search Engine Optimization organization. We don't dimension on any quality of value. Our unparalleled Search Engine Optimization administrations will without a doubt get you noticed globally!  </p>
+                
+                <div class="item">
+                    <div class="service_item">
+                        <!-- <i class="ti-ruler-pencil"></i> -->
+                        <img src="/assets/service/2.png" alt="">
+                        <h4>E-commerce Platform</h4>
+                        <p>Varied web improvement needs? At Code Garage Tech, we have the experience and aptitude to deal with all! From customized application development, offshore web development services to database management solutions using PHP, ROR, WordPress, Node js, we give full scope With us, you'll unquestionably appreciate the business stage you've generally wanted!</p>
+                    </div>
                 </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img src="/assets/service/4.png" alt="">
+                        <h4>Cyptocurrency</h4>
+                        <p>Code Garage Tech is a leading provider of iPhone applications that takes pride in conveying exceptionally powerful and far-reaching applications, uncommonly custom fitted to cook the requirements of different industry verticals. We are devoted to giving class app designing services in India and are glad to have an immense base of offshore and domestic customers.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img src="/assets/service/5.png" alt="">
+                        <h4>AI & ML</h4>
+                        <p>Achieve new heights with our unmatched Search Engine Optimization Services. In two decades, Code Garage Tech has delivered an impeccable record as one of the best Search Engine Optimization organization. We don't dimension on any quality of value. Our unparalleled Search Engine Optimization administrations will without a doubt get you noticed globally!  </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img src="/assets/service/5.png" alt="">
+                        <h4>Digital Marketing</h4>
+                        <p>Achieve new heights with our unmatched Search Engine Optimization Services. In two decades, Code Garage Tech has delivered an impeccable record as one of the best Search Engine Optimization organization. We don't dimension on any quality of value. Our unparalleled Search Engine Optimization administrations will without a doubt get you noticed globally!  </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -205,10 +251,73 @@
             <h2>Our Working Area</h2>
             <!-- <p>We Are A Creative Digital Agency. Focused on Growing Brands Online</p> -->
         </div>
-        <div class="row service_item_inner">
+        <div class="service_item_inner_slider owl-carousel">
+
+                <div class="item">
+                    <div class="service_item">
+                        <!-- <i class="ti-ruler-pencil"></i> -->
+                         <img src="/assets/ror1.png" alt="Icon"
+                        style="width: 50px; height: 50px;">
+
+                        <h4>Ruby on Rails</h4>
+                        <p>Code Garage Tech is a leading provider of iPhone applications that takes pride in conveying exceptionally powerful and uncommonly custom fitted to cook the requirements of different industry verticals. We are devoted to giving class app designing services in India.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/andoid1.png" style="width: 50px; height: 50px;">
+                        <h4>Android</h4>
+                        <p>We are Specialize in speed. Get your Mobile apps ready in minimum time span. We Offer Custom Android App Development Services For Businesses and Startups To Engage Users Effectively. Best Android Application Development Company for Custom Android Mobile Apps.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/pyhton.png" style="width: 50px; height: 50px;" />
+                        <h4>Python</h4>
+                        <p>In the regularly changing universe of search engine optimization, one goal stays consistent: traffic. The higher a site ranks on a search engine comes about page as observed by a client, the more activity the site will receive.We are specialists in SEO, SMO, ORM, PPC.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <!-- <i class="ti-ruler-pencil"></i> -->
+                        <img alt="Icon" src="/assets/node.png" style="width: 50px; height: 50px;" />
+                        <h4>Node JS</h4>
+                        <p>We are aware of latest updates of Node JS, an open source JavaScript platform. Hire a dedicated team of NodeJS Developers from Code Garage Tech, for Mobile or web applications as well as module development. Our developers will deliver you outstanding Nodejs development services.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/react.png" style="width: 75px; height: 50px;" />
+                        <h4>React</h4>
+                        <p>The premier Code carport Tech takes pride in presenting exhaustive training programs for students having a place with different divisions. The six months/Weeks industrial training at our Chandigarh based establishment institute with excellent course works.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/php1.png" style="width: 50px; height: 50px;" />
+                        <h4>PHP/Wordpress</h4>
+                        <p>We have best developers in our team who are expert in PHP and Wordpress. We Deal With Top-Notch Quality WordPress Web Development At Affordable Rates! Get custom WordPress cms development service for migration, plugin development at a reasonable cost.</p>
+                    </div>
+                </div>
+               <!--  <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/industry" style="width: 50px; height: 50px;" />
+                        <h4>Indisturial Training</h4>
+                        <p>The premier Code carport Tech takes pride in presenting exhaustive training programs for students having a place with different divisions. The six months/Weeks industrial training at our Chandigarh based establishment institute with excellent course works.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="service_item">
+                        <img alt="Icon" src="/assets/php" style="width: 50px; height: 50px;" />
+                        <h4>PHP/Wordpress</h4>
+                        <p>We have best developers in our team who are expert in PHP and Wordpress. We Deal With Top-Notch Quality WordPress Web Development At Affordable Rates! Get custom WordPress cms development service for migration, plugin development at a reasonable cost.</p>
+                    </div>
+                </div> -->
+
+            </div>
+        <!-- <div class="row service_item_inner">
             <div class="col-lg-4">
                 <div class="service_item">
-                    <!-- <i class="ti-ruler-pencil"></i> -->
                     <img src="/assets/rails" alt="Icon"
                     style="width: 50px; height: 50px;">
                     <h4>Ruby on Rails</h4>
@@ -230,8 +339,8 @@
                 </div>
             </div>
         </div>
-        </br>
-        <div class="row service_item_inner">
+        </br> -->
+        <!-- <div class="row service_item_inner">
             <div class="col-lg-4">
                 <div class="service_item">
                     <img alt="Icon" src="/assets/nodejs" style="width: 50px; height: 50px;" />
@@ -253,7 +362,7 @@
                     <p>We have best developers in our team who are expert in PHP and Wordpress. We Deal With Top-Notch Quality WordPress Web Development At Affordable Rates! Get custom WordPress cms development service for migration, plugin development at a reasonable cost.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="project_inner">
             <div class="center_title">
                 <h2>Ready To Discuss Your Project? </h2>
@@ -274,17 +383,22 @@
         </div>
         <div class="l_news_inner">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="l_news_item">
-                        <div class="l_news_img"><a href="<%= work_project_detail_ucview_path%>"><img class="img-fluid" src="/assets/ucview.png" alt=""></a></div>
-                        <div class="l_news_content">
-                            <a href="javascript:;"><h4>UCVIEW</h4></a>
-                            <p>Signage Software</p>
-                            <a class="more_btn" href="<%= work_project_detail_ucview_path%>">Learn More</a>
+                <%if @portfolios.present?%>
+                    <% @portfolios.each do |portfolio|%>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="l_news_item">
+                                <div class="l_news_img"><a href="<%= portfolio_show_path(portfolio.id)%>"><img class="img-fluid" src="<%=portfolio.photo.url%>" alt=""></a></div>
+                                <div class="l_news_content">
+                                    <a href="javascript:;"><h4><%=portfolio.name%></h4></a>
+                                    <p><%=portfolio.area%></p>
+                                    <a class="more_btn" href="<%= portfolio_show_path(portfolio.id)%>">Learn More</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                    <% end %>
+                <%end%>
+                
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="l_news_item">
                         <div class="l_news_img"><a href="<%= work_project_detail_welcomeai_path%>"><img class="img-fluid" src="/assets/welcomeai.png" alt=""></a></div>
                         <div class="l_news_content">
@@ -303,8 +417,11 @@
                             <a class="more_btn" href="<%= work_project_detail_markets_world_path%>">Learn More</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </section>
+<script>
+    
+</script>

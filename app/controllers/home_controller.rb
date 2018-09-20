@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
 	def index
-		
+		@portfolios = Portfolio.all
 	end
 
 	def project_detail1
