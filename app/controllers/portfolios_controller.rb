@@ -48,11 +48,11 @@ class PortfoliosController < ApplicationController
 	end
 	private
 	def portfolio_params
-	    params.require(:portfolio).permit(:name,:description,:technologies,:tools,:photo,:area)
+	    params.require(:portfolio).permit(:name,:description,:photo,:area)
 	end
 
 	def edit_portfolio_params
-	    params.require(:portfolio).permit(:name,:description,:technologies,:tools,:area)
+	    params.require(:portfolio).permit(:name,:description,:area)
 	end
 
 end

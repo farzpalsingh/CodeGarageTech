@@ -108,7 +108,7 @@
     
     if($(window).width()>992){
         $('.service_area').parallax("50%", 0.4);
-        $('.project_area').parallax("50%", 0.4);
+        
     }
     
     
@@ -121,7 +121,7 @@
             $('.testimonials_slider').owlCarousel({
                 loop:true,
                 margin: 0,
-                items: 1,
+                items: 3,
                 nav:true,
                 autoplay: true,
                 smartSpeed: 1500,

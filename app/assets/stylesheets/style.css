@@ -101,7 +101,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .p_100 {
-  padding: 100px 0px;
+  padding: 15px 0px;
 }
 
 iframe {
@@ -1092,7 +1092,7 @@ i:before {
 }
 
 .testimonials_slider .item .media .media-body {
-  padding-left: 100px;
+  padding-left: 50px;
   vertical-align: middle;
   padding-right: 40px;
 }
