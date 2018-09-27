@@ -22,7 +22,7 @@ class CareersController < ApplicationController
 
 	private
 	def career_params
-	    params.require(:career).permit(:f_name,:l_name,:email,:phn_number,:job_position,:work_experience,:current_salary,:expected_salary,:resume_file)
+	    params.require(:career).permit(:f_name,:l_name,:email,:phn_number,:job_position,:work_experience,:technologies,:resume_file)
 	end
 
 end
