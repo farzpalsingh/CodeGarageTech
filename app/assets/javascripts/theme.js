@@ -119,15 +119,35 @@
     function testimoninals_carousel(){
         if ( $('.testimonials_slider').length ){
             $('.testimonials_slider').owlCarousel({
-                loop:true,
+                // loop:true,
                 margin: 0,
-                items: 3,
+                // items: 3,
                 nav:true,
                 autoplay: true,
+                rewind: true,
                 smartSpeed: 1500,
                 dots:false,
+                touchDrag  : false,
+                mouseDrag  : false,
                 navContainer: '.testimonials_slider',
                 navText: ['<i class="ti-angle-left" aria-hidden="true"></i>','<i class="ti-angle-right" aria-hidden="true"></i>'],
+                
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:false
+                    },
+                    600:{
+                        items:2,
+                        nav:false
+                    },
+                    1000:{
+                        items:3,
+                        nav:true
+                        // loop:true
+                        
+                    }
+                }
             })
         }
     }
