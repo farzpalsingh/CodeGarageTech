@@ -1785,7 +1785,7 @@ i:before {
 .footer_widgets_area {
   background: #131627;
   overflow: hidden;
-  padding: 80px 0px;
+  padding: 50px 0px 40px;
 }
 
 .f_w_title {
@@ -1847,12 +1847,13 @@ i:before {
 }
 
 .subscribe_widget ul {
-  padding-top: 30px;
+  /*padding-top: 30px;*/
 }
 
 .subscribe_widget ul li {
   display: inline-block;
-  margin-right: 32px;
+  margin-right: 17px;
+  margin-left: -5px
 }
 
 .subscribe_widget ul li a {

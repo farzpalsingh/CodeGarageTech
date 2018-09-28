@@ -28,6 +28,17 @@
         <link rel="shortcut icon" href="/assets/favi.ico">
 	    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <style type="text/css">
+           .p_footer{
+
+                font-size: 14px;
+                color: #b5aec4;
+                font-family: "Poppins", sans-serif;
+                -webkit-transition: all 400ms linear 0s;
+                -o-transition: all 400ms linear 0s;
+                transition: all 400ms linear 0s;
+           }
+        </style>
   	</head>
 
   	<body>
@@ -115,7 +126,7 @@
                                 <div class="f_w_title">
                                     <h3>About Us</h3>
                                 </div>
-                                <p>We're a first class Ruby on Rails development and consulting organization situated in Mohali India. We’re in business just like you - we know how stressful it can be to work on projects with outside vendors, especially when large budgets are involved.</p>
+                                <p style="text-align: justify;">We're a first class Ruby on Rails development and consulting organization situated in Mohali India. We’re in business just like you - we know how stressful it can be to work on projects with outside vendors, especially when large budgets are involved.</p>
                                 <!-- <div class="input-group">
                                     <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
                                     <span class="input-group-btn">
@@ -145,28 +156,60 @@
                                     <h3>What We do</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="https://icons8.com">Icon pack by Icons8</a>
+                                    
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/ror3.png" height="20px">
+                                        Ruby on Rails</p>
                                     </li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Ruby on Rails</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Node.js</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Android</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Javascript</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>React</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Bootstrap</a></li>
-                                    <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i>PHP</a></li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/node.png" height="20px">
+                                        Node.js</p>
+                                    </li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/and2.png" height="20px">
+                                        Android</p>
+                                    </li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/js1.png" height="20px">
+                                        Javascript</p>
+                                    </li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/react2.png" height="20px">
+                                        React</p>
+                                    </li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/tizen-512.png" height="20px">
+                                        Tizen</p>
+                                    </li>
+                                    <li>
+                                        <p class="p_footer"><img src="/assets/php3.png" height="20px">
+                                        PHP</p>
+                                    </li>
+                                    
                                 </ul>
                             </aside>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <aside class="f_widget contact_widget">
+                            <aside class="f_widget " style="line-height: 23px;">
                                 <div class="f_w_title">
                                     <h3>Contact Us</h3>
                                 </div>
-                                <a href="javascript:;">0172-5092226</a></br>
-                                <a href="javascript:;">+917589103409</a>
-                                <a href="javascript:;">info@codegaragetech.com</a>
-                                <a href="javascript:;"> hr@codegaragetech.com</a>
-                                <p> D-185, Prosperity Square </br>
+                                <p class="p_footer">
+                                    <img src="/assets/tele.png" height="18px"> +0172-5092226
+                                </p>
+                                <p class="p_footer">
+                                    <img src="/assets/mob3.png" height="18px"> +91-7589103409
+                                </p>
+                                <br>
+                                <p class="p_footer">
+                                    <img src="/assets/sky.png" height="20px"> codegaragetech@123
+                                </p>
+                                <p class="p_footer">
+                                    <img src="/assets/gmail.png" height="20px"> hr@codegaragetech.com
+                                </p>
+                                <br>
+                                <p class="p_footer">
+                                    <img src="/assets/glob.png" height="20px"> Office #2, D-185, Prosperity Square, 
                                 Phase: 8-B, Industrial Area Mohali-160055, Punjab</p>
                             </aside>
                         </div>
@@ -177,10 +220,18 @@
                                 </div>
                                 <ul>
 
-                                    <li><a target="_blank" href="https://www.facebook.com/CodeGarageTech/"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a target="_blank" href="https://twitter.com/codegaragetech"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a target="_blank" href="https://plus.google.com/u/0/102050942109607469627"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/code-garage-tech-252043119/"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/CodeGarageTech/">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUJSURBVHhe7VrbTxxVHMa/o7BzW5Xdmd0Fii21XGW5bdkLl4Vd2IUFtqWA3EFrtNaaaoy3tLZNgFabKiaa1pfGJx60BRXa1JfGW7xgNL7YpDQxJi7Xn+fMzo4LTAjdzMx2zPmSL2eH3cPvO9/5nXNm5pwMAgICAgICAgICgtRAUUI2xVifo1j+Y5bLmWXMuV9oy5w5mrVdNdHWEzTNOyQZ+iMz07GHZoWrFMNvPG4tiBWUBaCkugtKa6Ka80BZECy2whiKDTRrn8ky85wkSx9QlCUX9cJdPqd0uaH9VYiOf5gW+qNvgi2vYgVp+YumLcWSPG0h9jxn+3PvQd9ax8hlWUzX2AdQ13YKnO4+xV5Tg+H+yU0GYHaiuAWlwXWUjX8zTPZjkkztQLHCFd5Rstwx/F/jawPPQ35hPVQ3jkOw+wy0DV6A9sF3VWd0fFqOmcyusWmw51etoo6Zk2RqA+wwHvPJaf9UbQ9UeAfQZ2VxerH5yGmgGGEji7UWSnLVB8Vaj+EJLxEU97zT079NTLoo5JXHTDT/tiRXfaD0/6igpHkDB8NjPv9gHQqc3p5PZnFVJ9CcY1aSqz4YzjGHg+Bgde2nxDG/VUQ6WekbAsbs+FGSqz5Yzn6rpPqwGAynfqD79DYR6WR1wyiw5pxfJLnqI9kAXOLZfquI3RLP3PWRV8DdNAIef5/MutZnFX+/G+puQGTovW0idsNQ73lweVphcmoS5hc+h18Xv5EZCPUo1tkNDWEAvnFxeUNwf+l3WF9b2sZwJPVVxRAGNKDJc3JqQrHxmKkYUFQZEUtDGOALjotpn2jwIkr7o70jEO0eElldG1KstxMNZUBD6xh8+91t2YAjPYPQNpD6ZIrZFH1LLA1hQH3LyCYDwpHUJ70E9xc3ieVDbUDL0XfA2zwMxc5G+P6Hr2UDOqK94t8TbOp88MdrQxjgDozDtWufiEvd2uo92YCle7/JS+CdOwvgaexWrL8T4w9jBjBg4eZ1ueFKxEPDFxxVrL8TvaGXxPKhN+DihQmYm5uB5djdTQ2fn/8MZmdn4Nz5s+BrPa5YfycaYgiE+yfQPcAJcNaENk2CmMVlXvE7zPaBi4r1d6IhDEhw6yqA6fK2K/52tyQGEAOIAWJJDCAGEAOIAYYw4OatG+IzQIKGNSCVu7ZA9DU4VBfdRH/kwW9/k5kWA5yePnEfMFlIOojfTOv2Rogx27/CZwBwMF/4ZXD5U3+FrRZ94ZOyjgrfEDLA8ZMkV33QLH8FH4TAwTpHL8MThXhrTFmYXiwoaZaHIu4c1ElfSnLVh4nmX8gWnpQ3R2v8z0ANSrvEtd70tqKnS3effG3Pr1ymaP6cJFd9ZLLZAj6W4u98XQ6K9wpdyIjEtV70trwI8WyMb84Ge84CytANE2spl+RqA5qzfyrkOle6Rt+XxVTVj8C+ogZwtxyHNvEUhzY7xm39U+ANnRTTvtz9tLi9Fv9uGvL2u9doznEbSXwkrlQjmEw2lmaF+0jEOt7lSYjrGL4knhcoquwQl6V9RY2qEv9PPNsf8h/bsvxOizEpRogxjGCXZGqLLMZShA8m2fOrVpoPx9/Jp4M47fP2e1ZpTviHYi0uSZ4+2MNaHmVY+3U8J/C5ZTHcCzgt9SCed+x7K5bxmMdpr1vPK4GihAMUY32D4Rw3EH9mONsfmtLsWMQHNVDMMxTFlyIJ2o55AgICAgICAgICAoL/ITIy/gWyD5rcx99SngAAAABJRU5ErkJggg==">
+                                    </a></li>
+                                    <li><a target="_blank" href="https://twitter.com/codegaragetech">
+                                        <img src="data:image/png;base64,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">
+                                    </a></li>
+                                    <li><a target="_blank" href="https://plus.google.com/u/0/102050942109607469627">
+                                        <img src="data:image/png;base64,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">
+                                    </a></li>
+                                    <li><a target="_blank" href="https://www.linkedin.com/in/code-garage-tech-252043119/">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVFhH7ZXZSsNAFIbzhD6Qr6CitwrijSB4JyJqUdRSWytSFFyqsS5F3JcmNUuTtMecOjrTdFyGTGKQ+eG7yTlMPg6zaCqyMjC4AFmCaNHgx6HFRiZQgnFRgnH5X4IjSw1YObDh5NaDvXoLpgpNbp9MhAQrly1g4wUdmNgwub2yEBJ0vA5Ro1mvOtxeWQgJvlhtokWT27e5vbIQEpzftaDNDPGhGcBYzuD2ykJIEJnMm92pzVUsGF3m98hEWDBthATxkEQp6PSQlE5duHj0e9g5d7u18TUTimEdryg9pHzmwnTp52tKSJCXrdq7AFK798lXmqtnH1YPbfD7z1c31Rvv232cuGDL77+aosGpsv9hSVzwt5ndfu351wepCOJe3Qz3Kj6T9Sd+z9E1f4qpCM6U6XSGw/f8zghIhcZw2p89LIkL4uvDroEUdZdUaYLwEEX7kMQF8RSzayD5Y4dUexPtQ5SgEmThRQkqQSX4xyjBuCjBuHwpmCWIlkrMaNobTfyvU0OkzigAAAAASUVORK5CYII=">
+                                    </a></li>
                                     <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
                                     <!-- <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
                                 </ul>
@@ -189,7 +240,7 @@
                     </div>
                 </div>
             </div>
-            <div class="copy_right_area">
+            <!-- <div class="copy_right_area">
                 <div class="container">
                     <div class="float-md-left">
                         <h5>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></h5>
@@ -211,7 +262,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </footer>
         <!--================End Footer Area =================-->
 
