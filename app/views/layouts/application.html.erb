@@ -40,8 +40,28 @@
            }
 
            .li_header{
+            /*margin-right: 20px !important;
+            display: inline-block !important;*/
+           }
+
+           .social_li{
+            display:flex;
+            align-items: center;
+            
+           }
+
+           .social_li li{
             margin-right: 20px !important;
-            display: inline-block !important;
+           }
+
+           .social_li li:last-child{
+            margin-right: -50px !important;
+           }
+
+           .social_li li a {
+               /*padding-right: 0px !important;*/
+            padding: 0px 2px !important;
+            /*margin-left: 15px;*/
            }
         </style>
   	</head>
@@ -91,8 +111,8 @@
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- <ul class="navbar-nav mr-auto"> -->
-                    <ul class="navbar-nav" style="margin-right: -62px">
+                    <ul class="navbar-nav mr-auto">
+                    <!-- <ul class="navbar-nav" style="margin-right: -62px"> -->
                         <li class="nav-item <%= request.path == "/" ? "active" : "" %>"><a class="nav-link" href="<%= root_path%>">Home</a></li>
                         <!-- <li class="nav-item"><a class="nav-link" href="#">Services</a> -->
                         <!-- </li> -->
@@ -108,22 +128,24 @@
                         <% end %>
 
                          <li class="nav-item <%= request.path == "/careers" ? "active" : "" %>">
-                             <ul >
+                             <ul class="social_li">
                                  <li class="li_header"><a href="https://www.facebook.com/CodeGarageTech/z" target="_blank" >
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFgSURBVEhL7ZbBSsNAEIYD+jYq+gDSpeC9jdIHEY+iCF7UgzcfwYvixSQWKUVQEYsN0hw8aFGsBCKtVRDFCnbMjhNQdomQjuaSH/7L8s//sWwIY2RKVUIcDOcKzpiYtqcGMXaEXVQbL1GwJ3Km3RSmAxwOu65kJ9XrhTeVQU3BQC46l6XS1hBhVAnTGtUOMjg/Ux4hjCpR3JvUDbE47CaMqqTg+ZU6HNcCuGk9gx+8gHfRVXPc4LmlGvT78ENB+1XNcoPtSotwX8By9Q42d5pqlhvsNjqEBVjb8LQZNDdYvmek5fVzbQbNBd62rvFD6r1/EBag+9TDs5Oze3WGC1w59AmnqnrkqzNcYPmeu/u38PD4RjgA1+vg2cKqq85wgSP/+xtHzsC6DDoDf1d64ASLgPyD1Rtt9OziqTYjHbsIyPUkldVHKm9a4zKoLUjisEt2Un288OZM6+2vN830tzKMT6AyKI1yoK/YAAAAAElFTkSuQmCC">
+                                </a></li>
                                 <li class="li_header">
                                     <a href="https://twitter.com/codegaragetech" target="_blank" >
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHsSURBVEhL7VZLS8NAEC7UqIgXUfAqKAi+QQ8eehD0qngWBK/+Bg8ePfgP9C5pFRV8K1rQgwriQVHEWgTBF/jCpElam4wzMbGmSdqujRShH3wkbHe+byczu11fEYVFGEq4oNDq54W+fEgapGWoZgYXEjv8QfEKCZ6QFyOkaci7AFdHEx0F8iEvXvpC4Ddc7OB4ocUx0ANyM0KzYWNHSeg94BTkBUnbsLHjXxl3b0kweZGAifMEdG5K+lgXPhtXvt5NMhuTaMNyzDJmsn9Xhg8NvkHvNzENpqIfULtojWE2PntTISpq0LZuzYB4/KIalilISYDDJxWq5/M0ptUTRHyMHilQPpv6LWH31dEbli0aRGbjplUJIkLK4RqzHz+Nw8CebIzYYdb6J5mNN+6T+ufOFSrWuWbB3hPMxj07MsSwbrmC6puuQWQ2ppoO7St6t+aCkUPFEm+S2bg0JMLaXW4pHz2rUIbz0zWIzMZ6EHIQm2kaO/xRcc78VtKg3mW/E5mNK/BT0wEyfKDAqkvmlGndkrspkcm4Cg+BsZM4nLzau5pOqe2HpF5T/L+1mDiROWOTtAjan4FtGZpxb1fOOc9z46+N82VG44JdBOh6UpCrD4HjxXaa6CjwG6IWaRryWYCr8+x6my3TIv4WPt8ngogUhXPy4wcAAAAASUVORK5CYII=">
                                     </a>
                                 </li>
-                                <li class="li_header">
-                                    <a href="https://plus.google.com/u/0/102050942109607469627" target="_blank" >
-                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFUSURBVEhL7ZQ9q8IwGIX73/yBgqKDgrubq4s6KFdFcHMQUVT8RnCzbZqe27w0/aQ3UW5d7IED9T2JT5O+ifG9+imV8An7uFCi+CyXc3UBJhXgPKwPrlRg9/vgpxNg2wBj4Ocz7MGAstR4hbXAZrMJfr2CZFngux348UjPQna3GxuvYzXYW417uxGATSZ4VqthVq/D6nTC3y9YCRbbG0AjE3UtlawrwfRNvS2NrfQFSyXrSrBoJPFNo5OEqdG2W/D1Gs5ySWbDYZBnSeZvg9l4DPfxCAzXBV+tgjxLMleCZff+tdVmq0V/ymazVCaVrCvBOs3lLBY0xmq3U5lUsq4E03HyzzCbTuMrr9XgzOeU8c0mrGtYDfZsNhrglwsB6ALZ78EPh+ACce93GhOdo7IWmCyuzF4vvLFE03kvw0ajt46aPvifXYBJBTgPZ4I/YR/3dTKMX7jjFXB2S7DxAAAAAElFTkSuQmCC" style=" height: 27px; ">
-                                    </a>
-                                </li>
+                                
                                 <li class="li_header">
                                     <a href="https://www.linkedin.com/in/code-garage-tech-252043119/" target="_blank" >
                                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGRSURBVEhLYxgFAwvq97MwtF/UZW6/5EIJBpkBNoso0HXegKn9wh2mjov/qYMv3AaZCTUdBwC6DqQQuwEU4PaLtxhWrWKG2oIFtF7QwaqRCpih47w21BYsoOOCDbJiZiCO3vTwf/qOx/85uy+hGEQqBpkNtQULQLM4BmgpDFQeeI5iEKmYJIvTtj+GWvv/f9uxlygGkYpJspgDGLw1B5//bwVaKtB/BcUgUjFJFgsBLVOZcR2MJSZdxSnG0nkRzAbRyPqRMUkWg+IVBpZdfY9VrHjvs/8ff/wB87/++vt/1fX3/0UmYIYOVS1+9fU3lIUKDjz8DDcDhqlqMQgcffL1f9+pV/9vvfsBFYEAi4W34eaAMFUtvvn2Bzx/g+IeOQTydj+FmwPCVLUYJgbD625+gMr8/9905AWKHE0tBvFhoOM4ar4ftRgVjHiLHZfd/d95/BUYR258iFMMhkF8mJznqnsocvgtHrCGALB5MjBNHxBov6wPUojVAHIwyFKgmVDTCQCQ66jVvCXo01FAU8DAAAA/JqYJnFVZ7QAAAABJRU5ErkJggg==">
+                                    </a>
+                                </li>
+                                <li class="li_header">
+                                    <a href="https://plus.google.com/u/0/102050942109607469627" target="_blank" >
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFUSURBVEhL7ZQ9q8IwGIX73/yBgqKDgrubq4s6KFdFcHMQUVT8RnCzbZqe27w0/aQ3UW5d7IED9T2JT5O+ifG9+imV8An7uFCi+CyXc3UBJhXgPKwPrlRg9/vgpxNg2wBj4Ocz7MGAstR4hbXAZrMJfr2CZFngux348UjPQna3GxuvYzXYW417uxGATSZ4VqthVq/D6nTC3y9YCRbbG0AjE3UtlawrwfRNvS2NrfQFSyXrSrBoJPFNo5OEqdG2W/D1Gs5ySWbDYZBnSeZvg9l4DPfxCAzXBV+tgjxLMleCZff+tdVmq0V/ymazVCaVrCvBOs3lLBY0xmq3U5lUsq4E03HyzzCbTuMrr9XgzOeU8c0mrGtYDfZsNhrglwsB6ALZ78EPh+ACce93GhOdo7IWmCyuzF4vvLFE03kvw0ajt46aPvifXYBJBTgPZ4I/YR/3dTKMX7jjFXB2S7DxAAAAAElFTkSuQmCC" style=" height: 26px; ">
                                     </a>
                                 </li>
                            </ul>
