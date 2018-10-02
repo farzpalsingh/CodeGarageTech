@@ -22,6 +22,8 @@
         /*margin: auto;*/
     }
 </style>
+<!-- <link href="/assets/style_port.css" rel="stylesheet"> -->
+
 <section class="top_slider_area">
     <div id="" class="rev_slider" style="background: url('/assets/bg2.jpg') no-repeat center center / cover; min-height: 100vh; position: relative; box-shadow: inset 0 0 0 1000px rgba(35, 29, 29, 0.9)" >
             <!-- MAIN IMAGE -->
@@ -455,7 +457,7 @@
 
 
 <!--================Latest News Area =================-->
-<section class="latest_news_area p_100">
+<section class="latest_news_area p_100" style=" background: lavender;">
     <div class="container">
         <div class="b_center_title">
             <h2>Our Portfolio</h2>
@@ -503,6 +505,95 @@
     </div>
 
 </section>
+
+
+
+
+<!-- <section id="portfolio" class="section-padding wow fadeInUp delay-05s animated" style="visibility: visible; animation-name: fadeInUp;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">Our Recent Works</h2>
+            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
+            <hr class="bottom-line">
+          </div> -->
+
+
+          
+
+          <%#if @portfolios.present?%>
+            <%# @portfolios.each do |portfolio|%>
+                <!-- <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15"> -->
+                    <!-- <figure> -->
+                        <!-- <img src="<%#=portfolio.photo.url%>" class="img-responsive" style="height: 206.66px; width:385px"> -->
+                        <!-- <figcaption> -->
+                            <!-- <h2><a href="<%#= root_path%>" style="color: white"><%#= portfolio.name%></a></h2> -->
+                            <!-- <p><%#= portfolio.area%></p> -->
+                        <!-- </figcaption> -->
+                    <!-- </figure> -->
+                <!-- </div> -->
+            <%# end %>
+         <%#end%>
+        
+          <!--   
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive" style="height: 206.66px; width:385px">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div>
+          //
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="/assets/ucview.png" class="img-responsive">
+              <figcaption>
+                <h2>Project For Everyone</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+              </figcaption>
+            </figure>
+          </div> -->
+        </div>
+      </div>
+    </section>
 <section class="testimonials_area p_100">
     <div class="container">
         <div class="b_center_title">
@@ -655,7 +746,8 @@
     }
 
 //     $('.more_button').on('click', function(e) {
-//     $('.owl-carousel').trigger('stop.owl.autoplay');
+//         // debugger
+//     // $('.owl-carousel').trigger('stop.owl.autoplay');
 // })
 </script>
 
