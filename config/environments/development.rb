@@ -50,11 +50,12 @@ Rails.application.configure do
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
+  # Paperclip.options[:command_path] = "/usr/local/bin/"
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   ActionMailer::Base.smtp_settings = {
-   :user_name => 'sahil@codegaragetech.com',
-   :password => 'sahilsharma20',
+   :user_name => 'service@codegaragetech.com',
+   :password => 'codegaragetech@123',
    :domain => 'codegaragetech.com',
    :address => 'smtp.gmail.com',
    :port => 587,
