@@ -9,9 +9,12 @@ class CareersController < ApplicationController
 		@career = Career.new(career_params)
 		if @career.save
         	ResumeToHr.perform_later career_params.as_json,@career.resume_file.path
+	    	flash[:notice] = "Your resume has been submitted. We will contact you shortly"
 	    	redirect_back(fallback_location: root_path)
 	    else
-	    	flash[:error] = @career.errors.full_messages
+	    	@career.errors.full_messages.each do |msg|
+	    		flash[:error] = msg
+	    	end
 	    	render 'new'
 	    end
 	end

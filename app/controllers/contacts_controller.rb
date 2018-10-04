@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
      		# MailUserMailer.send_mail_to_user(cont_email).deliver
         	# ContactMailer.send_mail_to_admin(contact_params).deliver
             SendMailToHrJob.perform_later contact_params.as_json
-     		# flash[:notice] = "Your message has been sent"
+     		flash[:notice] = "Thank you! We will contact you back shortly"
         # else
             # flash[:notice]=@contact.errors.full_messages
         # end
