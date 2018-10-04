@@ -212,6 +212,7 @@ i:before {
   z-index: 30;
   padding: 0px 75px;
   border-bottom: 1px solid #626571;
+      background: rgba(0,0,0,0.5);
 }
 
 .main_menu_area .navbar {
@@ -799,9 +800,48 @@ i:before {
   transition: all 400ms ease-out;
 }
 
+.read_btn2 {
+  height: 46px;
+  width: 160px;
+  line-height: 48px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, left top, right top, from(#744fff), color-stop(51%, #21d397), to(#744fff));
+  background-image: -webkit-linear-gradient(left, #744fff 0%, #21d397 51%, #744fff 100%);
+  background-image: -o-linear-gradient(left, #744fff 0%, #21d397 51%, #744fff 100%);
+  background-image: linear-gradient(to right, #744fff 0%, #21d397 51%, #744fff 100%);
+  text-align: center;
+  position: relative;
+  background-size: 200% auto;
+  z-index: 2;
+  display: block;
+  -webkit-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  transition: all 400ms ease-out;
+  margin: 30px auto;
+}
+
 .read_btn:before {
   content: "";
   background: #f7f7f7;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 98%;
+  height: 42px;
+  z-index: -1;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+}
+
+.read_btn2:before {
+  content: "";
+  /*background: #f7f7f7;*/
+  
   position: absolute;
   left: 2px;
   top: 2px;
@@ -1075,6 +1115,7 @@ i:before {
   font-style: italic;
   text-align: justify;
 }
+
 
 /* End Our Service Area css
 ============================================================================================ */

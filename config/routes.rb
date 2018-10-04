@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'work/project-detail-welcomeai'=>'home#project_detail2'
   get 'work/project-detail-markets-world'=>'home#project_detail3'
   get '/about-us'=>'home#about_us'
+  get '/technologies'=>'home#technologies'
   get '/contact' =>'contacts#index'
   post '/contact/create' => 'contacts#create'
   get '/careers' => 'careers#new'
