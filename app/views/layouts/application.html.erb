@@ -391,10 +391,14 @@
         <script src="/assets/theme.js"></script>
         <script type="text/javascript">
             $('.service_item_inner_slider').owlCarousel({
-                loop:true,
+                // loop:true,
                 margin:10,
+
                 responsiveClass:true,
                 autoplay: true,
+                rewind: true,
+                touchDrag  : false,
+                mouseDrag  : false,
                 smartSpeed: 2500,
                 navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
                 responsive:{
@@ -409,7 +413,7 @@
                     1000:{
                         items:3,
                         nav:true,
-                        loop:true
+                        // loop:true
                         
                     }
                 }
