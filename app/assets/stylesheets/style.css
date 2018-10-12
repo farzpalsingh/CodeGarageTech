@@ -210,7 +210,7 @@ i:before {
   top: 0px;
   left: 0px;
   z-index: 30;
-  padding: 0px 75px;
+  padding: 15px 75px;
   border-bottom: 1px solid #626571;
       background: rgba(0,0,0,0.5);
 }
@@ -316,6 +316,12 @@ i:before {
     -ms-transform: scaleY(1);
     transform: scaleY(1);
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .pad-bot{
+    padding-bottom: 6px;
+      }
 }
 
 .main_menu_area .navbar .navbar-nav.justify-content-end {
