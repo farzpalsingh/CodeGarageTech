@@ -5,9 +5,34 @@
           -webkit-appearance: none; 
           margin: 0; 
         }
+
+        .slc-cls{
+          height: 58px;
+          border-radius: 25px;
+          text-align-last: center;
+
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="/assets/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/animate.css">
+<!--===============================================================================================-->
+  <!-- <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css"> -->
+<!--===============================================================================================-->
+  <!-- <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css"> -->
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/assets/select2.min.css">
+<!--===============================================================================================-->
+  <!-- <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css"> -->
+<!--===============================================================================================-->
+  <!-- <link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css"> -->
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/1css" href="/assets/util_con.css">
+  <link rel="stylesheet" type="text/css" href="/assets/main_con.css">
 </head>
-<section class="banner_area">
+<!-- <link rel="stylesheet" type="text/css" href="/assets/main_car.css"> -->
+
+<section class="banner_area" style="background-image: url(/assets/career3.jpg);box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.8);">
     <div class="container">
         <div class="banner_text_inner">
             <h4>Careers</h4>
@@ -18,113 +43,115 @@
 <!--================End Banner Area =================-->
 
 <!--================Contact Us Area =================-->
-<section class="contact_us_area">
-    <div class="container">
-        <div class="contact_details_inner">
-            <div class="row">
-                <div class="col-lg-10" style="margin: 0 auto;">
-                    <div class="contact_form">
-                        <div class="main_title">
-                            <h2>Career</h2>
-                            <!-- <p>Fill out the form below to recieve a free and confidential.</p> -->
-                        </div>
-                        <form class="contact_us_form row" action="/create_career" method="post" id="contactForm"  enctype="multipart/form-data" novalidate>
-                            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                            
-                            <div class="form-group col-lg-6">
-                                <input type="text" value="<%=@career.f_name%>" class="form-control" id="name" name="career[f_name]" placeholder="First Name" required="required"
-                                data-error="Name is required.">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <input type="text" value="<%=@career.l_name%>" class="form-control" id="name" name="career[l_name]" placeholder="Last Name" required="required"
-                                data-error="Name is required.">
-                            </div>
 
-                            <div class="form-group col-lg-6">
-                                <input type="email" value="<%=@career.email%>" class="form-control" id="email" name="career[email]" placeholder="Email" required="required" data-error="Email is required.">
-                            </div>
 
-                            <div class="form-group col-lg-6">
-                                <input type="number" value="<%=@career.phn_number%>" class="form-control quantity" id="phone_number" name="career[phn_number]" placeholder="Phone Number" required="required" data-error="Phone number is required." step="1" min="1" maxlength="4"/>
-                               
-                            </div>
 
-                            <div class="form-group col-lg-6">
-                                Please select a job position*
-                                <!-- <input type="text" class="form-control" id="subject" name="career[job_position]" placeholder="Job Position" required="required"  > -->
-                                <select class="form-control" name="career[job_position]" required="required" data-error="Please select a job position" style="color:darkgrey">
+<div class="container-contact100" style="background: url(/assets/career2.jpg) no-repeat center center / cover;box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.8);">
+    <div class="wrap-contact100">
+      <form class="contact100-form validate-form" action="/create_career" method="post" id="contactForm"  enctype="multipart/form-data">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <span class="contact100-form-title" style="color: white">
+          Please fill the following form:
+        </span>
 
-                                  <!-- <option hidden >Job Position</option> -->
-                                  <option value="Web Developer">Web Developer</option>
-                                  <option value="Web Designer" >Web Designer</option>
-                                  <option value="Mobile Developer">Mobile Developer</option>
-                                  <option value="Mobile+Web Developer">Mobile+Web Developer</option>
-                                  <option value="Internet Marketing Expert">Internet Marketing Expert</option>
-                                  <option value="SEO Analyst">SEO Analyst</option>
-                                  <option value="Content Writer">Content Writer
-                                    </option>
-                                  <option value="Multi-Talented">Multi-Talented</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group col-lg-6">
-                                Your work experience*
-                               <!--  <input type="text" class="form-control" id="subject" name="career[work_experience]" placeholder="Experience" required="required" data-error="Subject is required."> -->
-                                <select class="form-control" name="career[work_experience]" required="required" data-error="Please select a job position" style="color:darkgrey">
-                                  <!-- <option hidden >Work experience</option> -->
-                                  <option value="1 Year">1 year</option>
-                                  <option value="2 Year">2 Year</option>
-                                  <option value="3 Year">3 Year</option>
-                                  <option value="4 Year">4 Year</option>
-                                  <option value="5 Year">5 Year</option>
-                                  <option value="5+ years" >5+ years</option>
-                                </select>
-
-                            </div>
-
-                            <div class="form-group col-lg-6">
-                                Technologies*
-                               <!--  <input type="text" class="form-control" id="subject" name="career[work_experience]" placeholder="Experience" required="required" data-error="Subject is required."> -->
-                                <select class="form-control" name="career[work_experience]" required="required" data-error="Please select a job position" style="color:darkgrey">
-                                  <!-- <option hidden >Work experience</option> -->
-                                  <option value="Android/Ios">Android/Ios</option>
-                                  <option value="React/Redux Native">React/Redux Native</option>
-                                  <option value="Ruby On Rails">Ruby On Rails</option>
-                                  <option value="Python/Djnago/Flask">Python/Djnago/Flask</option>
-                                  <option value="Laravell/Code-Igniter">Laravell/Code-Igniter</option>
-                                  <option value="WordPress/PHP">WordPress/PHP</option>
-                                  <option value="Angular/React/Backbone/Vue Js frameworks">Angular/React/Backbone/Vue Js frameworks</option>
-                                  <option value="Node/Express Js">Node/Express Js</option>
-                                  <option value="Multi-Technologies">Multi-Technologies</option>
-                                 
-                                </select>
-
-                            </div>
-
-                            
-
-                            <!-- <div class="form-group col-lg-12">
-                                <textarea class="form-control" name="career[resume]" id="message" rows="3" placeholder="Paste Resume Here(Max  6000 Character)" required="required" data-error="Message is required."></textarea>
-                            </div> -->
-                            
-                            <!-- <div class="form-group col-lg-6"> -->
-                                <div class="col-md-12">
-                                    <label>Upload resume*(PDF)</label>
-                                </div>
-                                 <div class="col-md-12">
-                                    <input type="file" name="career[resume_file]" required="required" accept="application/pdf">
-                                </div>
-                                </br>
-                                </br>
-                            <!-- </div> -->
-
-                            <div class="form-group col-md-6">
-                                <button type="submit" value="submit" class="btn submit_btn2 form-control">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+          <span class="label-input100">FULL NAME *</span>
+          <input class="input100" type="text" value="<%=@career.f_name%>" id="name" name="career[f_name]" placeholder="Enter Your Name">
         </div>
+
+        <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+          <span class="label-input100">Email *</span>
+          <input class="input100" type="text" value="<%=@career.email%>" id="email" name="career[email]" placeholder="Enter Your Email ">
+        </div>
+
+        <div class="wrap-input100 bg1 rs1-wrap-input100">
+          <span class="label-input100">Phone</span>
+          <input type="number" class="input100" type="text" id="phone_number" name="career[phn_number]" value="<%=@career.phn_number%>" name="phone" placeholder="Enter Number Phone" step="1" min="1" maxlength="4">
+        </div>
+
+        <div class="wrap-input100 input100-select bg1">
+          <span class="label-input100"> Please select a job position*</span>
+          <div>
+            <select class="js-select2" name="career[job_position]" required="required">
+              <option value="Web Developer">Web Developer</option>
+              <option value="Web Designer">Web Designer</option>
+              <option value="Mobile Developer">Mobile Developer</option>
+              <option value="Mobile+Web Developer">Mobile+Web Developer</option>
+              <option value="Internet Marketing Expert">Internet Marketing Expert</option>
+              <option value="SEO Analyst">SEO Analyst</option>
+              <option value="Content Writer">Content Writer</option>
+              <option value="Multi-Talented">Multi-Talented</option>
+            </select>
+            <div class="dropDownSelect2"></div>
+          </div>
+        </div>
+
+        <div class="wrap-input100 input100-select bg1">
+          <span class="label-input100"> Your work experience*</span>
+          <div>
+            <select class="js-select2" name="career[work_experience]" required="required">
+              <option value="1 year"> 1 year</option>
+              <option value="2 years"> 2 years</option>
+              <option value="3 years">3 years</option>
+              <option value="4 years">4 years</option>
+              <option value="5 years">5 years</option>
+              <option value="5+ years">5+ years</option>
+            </select>
+            <div class="dropDownSelect2"></div>
+          </div>
+        </div>
+
+        <div class="wrap-input100 input100-select bg1">
+          <span class="label-input100"> Technologies*</span>
+          <div>
+
+            <select class="js-select2" name="career[work_experience]" required="required">
+              <option value="Android/Ios">Android/Ios</option>
+              <option value="React/Redux Native"> React/Redux Native</option>
+              <option value="Python/Djnago/Flask">Python/Djnago/Flask</option>
+              <option value="Ruby On Rails">Ruby On Rails</option>
+              <option value="WordPress/PHP">WordPress/PHP</option>
+              <option value="Angular/React/Backbone/Vue Js frameworks">Angular/React/Backbone/Vue Js frameworks</option>
+              <option value="Node/Express Js">Node/Express Js</option>
+              <option value="Multi-Technologies">Multi-Technologies</option>
+
+            </select>
+            <div class="dropDownSelect2"></div>
+          </div>
+        </div>
+
+        <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+          <span class="label-input100">Upload Resume</span>
+          <input type="file" class="input100"name="career[resume_file]" required="required" accept="application/pdf">
+        </div>
+<!-- 
+        <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+          <span class="label-input100">Message</span>
+          <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+        </div> -->
+
+        <div class="container-contact100-form-btn">
+          <button class="contact100-form-btn">
+            <span>
+              Submit
+              <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </form>
     </div>
-</section>
+  </div>
+
+
+<script src="/assets/select2.min.js"></script>
+  <script>
+    $(".js-select2").each(function(){
+      $(this).select2({
+      
+      });
+    })
+  </script>
+<!--===============================================================================================-->
+  
+<!--===============================================================================================-->
+  <script src="/assets/main_con.js"></script>
