@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+
+  get 'errors/not_found'
+
+  get 'errors/internal_server_error'
+
+  match "/404", :to => "errors#not_found", :via => :all
+
   # devise_for :admins
   devise_for :admins, :skip => [:registrations], :controllers => {confirmations: 'confirmations', sessions: 'admins/sessions' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :portfolios
+  # resources :blogs
   root 'home#index'
   get '/work/project-detail/:id'=>'portfolios#show', as: 'portfolio_show'
   post "/work/update-project-details" =>"portfolios#update_portfolio", as: "update_project_details"
@@ -15,5 +23,7 @@ Rails.application.routes.draw do
   post '/contact/create' => 'contacts#create'
   get '/careers' => 'careers#new'
   post '/create_career'=>'careers#create'
+  get '*a', :to => 'errors#not_found'
+  
 
 end
