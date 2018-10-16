@@ -581,6 +581,7 @@ i:before {
 .c_box_item {
   padding: 0px 35px 0px 40px;
   position: relative;
+  text-align: justify;
 }
 
 .c_box_item:before {
