@@ -1,157 +1,128 @@
-<head>
-    <style type="text/css">
-        .quantity::-webkit-inner-spin-button, 
-        .quantity::-webkit-outer-spin-button { 
-          -webkit-appearance: none; 
-          margin: 0; 
-        }
-
-        .slc-cls{
-          height: 58px;
-          border-radius: 25px;
-          text-align-last: center;
-
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="/assets/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="/assets/animate.css">
-<!--===============================================================================================-->
-  <!-- <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css"> -->
-<!--===============================================================================================-->
-  <!-- <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css"> -->
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="/assets/select2.min.css">
-<!--===============================================================================================-->
-  <!-- <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css"> -->
-<!--===============================================================================================-->
-  <!-- <link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css"> -->
-<!--===============================================================================================-->
-  <link rel="stylesheet" type="text/1css" href="/assets/util_con.css">
-  <link rel="stylesheet" type="text/css" href="/assets/main_con.css">
-</head>
-<!-- <link rel="stylesheet" type="text/css" href="/assets/main_car.css"> -->
-
-<!-- <section class="banner_area" style="background-image: url(/assets/career3.jpg);box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.8);">
-    <div class="container">
-        <div class="banner_text_inner">
-            <h4>Careers</h4> -->
-            <!-- <h5>Tell us about your story and your project.</h5> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </section> -->
+<section class="banner_area_career">
+  <div class="container">
+      <div class="banner_text_inner">
+          <h4>Career</h4>
+          <!-- <h5>Tell us about your story and your project.</h5> -->
+      </div>
+  </div>
+</section>
 <!--================End Banner Area =================-->
 
 <!--================Contact Us Area =================-->
-
-
-
-<div class="container-contact100" style="background: url(/assets/career5.jpg) no-repeat center center / cover;box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.8);">
-    <div class="wrap-contact100" style="margin-top: 100px">
-      <form class="contact100-form validate-form" action="/create_career" method="post" id="contactForm"  enctype="multipart/form-data">
-        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-        <span class="contact100-form-title" style="color: white">
-          Please fill the following form:
-        </span>
-
-        <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
-          <span class="label-input100">FULL NAME *</span>
-          <input class="input100" type="text" value="<%=@career.f_name%>" id="name" name="career[f_name]" placeholder="Enter Your Name">
-        </div>
-
-        <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
-          <span class="label-input100">Email *</span>
-          <input class="input100" type="text" value="<%=@career.email%>" id="email" name="career[email]" placeholder="Enter Your Email ">
-        </div>
-
-        <div class="wrap-input100 bg1 rs1-wrap-input100">
-          <span class="label-input100">Phone</span>
-          <input type="number" class="input100" type="text" id="phone_number" name="career[phn_number]" value="<%=@career.phn_number%>" name="phone" placeholder="Enter Number Phone" step="1" min="1" maxlength="4">
-        </div>
-
-        <div class="wrap-input100 input100-select bg1">
-          <span class="label-input100"> Please select a job position*</span>
-          <div>
-            <select class="js-select2" name="career[job_position]" required="required">
-              <option value="Web Developer">Web Developer</option>
-              <option value="Web Designer">Web Designer</option>
-              <option value="Mobile Developer">Mobile Developer</option>
-              <option value="Mobile+Web Developer">Mobile+Web Developer</option>
-              <option value="Internet Marketing Expert">Internet Marketing Expert</option>
-              <option value="SEO Analyst">SEO Analyst</option>
-              <option value="Content Writer">Content Writer</option>
-              <option value="Multi-Talented">Multi-Talented</option>
-            </select>
-            <div class="dropDownSelect2"></div>
-          </div>
-        </div>
-
-        <div class="wrap-input100 input100-select bg1">
-          <span class="label-input100"> Your work experience*</span>
-          <div>
-            <select class="js-select2" name="career[work_experience]" required="required">
-              <option value="1 year"> 1 year</option>
-              <option value="2 years"> 2 years</option>
-              <option value="3 years">3 years</option>
-              <option value="4 years">4 years</option>
-              <option value="5 years">5 years</option>
-              <option value="5+ years">5+ years</option>
-            </select>
-            <div class="dropDownSelect2"></div>
-          </div>
-        </div>
-
-        <div class="wrap-input100 input100-select bg1">
-          <span class="label-input100"> Technologies*</span>
-          <div>
-
-            <select class="js-select2" name="career[work_experience]" required="required">
-              <option value="Android/Ios">Android/Ios</option>
-              <option value="React/Redux Native"> React/Redux Native</option>
-              <option value="Python/Djnago/Flask">Python/Djnago/Flask</option>
-              <option value="Ruby On Rails">Ruby On Rails</option>
-              <option value="WordPress/PHP">WordPress/PHP</option>
-              <option value="Angular/React/Backbone/Vue Js frameworks">Angular/React/Backbone/Vue Js frameworks</option>
-              <option value="Node/Express Js">Node/Express Js</option>
-              <option value="Multi-Technologies">Multi-Technologies</option>
-
-            </select>
-            <div class="dropDownSelect2"></div>
-          </div>
-        </div>
-
-        <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
-          <span class="label-input100">Upload Resume</span>
-          <input type="file" class="input100"name="career[resume_file]" required="required" accept="application/pdf">
-        </div>
-<!-- 
-        <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
-          <span class="label-input100">Message</span>
-          <textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+<section class="contact_us_area">
+    <div class="container">
+        <!-- <div id="mapBox" class="mapBox row m0"
+            data-lat="1.30921"
+            data-lon="103.8509813"
+            data-zoom="14"
+            data-marker="img/map-marker.png"
+            data-info="Broadway Hotel"
+            data-mlat="1.30921"
+            data-mlon="103.8509813">
         </div> -->
+        
+        <div class="contact_details_inner">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact_text">
+                        <div class="main_title">
+                            <h2>Searching for a Job?</h2>
+                            <!-- <p>There are many ways to contact us. You may drop us a line, give us a call or send an email, choose what suits you the most.</p> -->
+                        </div>
+                        <div class="contact_d_list">
+                            
+                            <div class="contact_d_list_item ">
+                                <!-- <h4>Email</h4> -->
+                                <img class="col-lg-12"  src="/assets/cv1.jpg" >
+                                
+                            </div>
+                            
 
-        <div class="container-contact100-form-btn">
-          <button class="read_btn">
-            <span>
-              Submit
-              <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-            </span>
-          </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact_form">
+                        <div class="main_title">
+                            <h2 style="font-size: 37px">Please fill in the following form </h2>
+                            
+                        </div>
+                        <form class="contact_us_form row" action="/create_career" method="post" id="contactForm" enctype="multipart/form-data">
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                                <input type="text" class="form-control" id="name" value="<%=@career.f_name%>" name="career[f_name]" placeholder="Name" required="required"
+                                data-error="Name is required.">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="email" class="form-control" value="<%=@career.email%>" name="career[email]" placeholder="Enter Your Email " data-error="Email is required.">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" id="subject" name="career[phn_number]" value="<%=@career.phn_number%>" placeholder="Enter Phone Number " step="1" min="1" maxlength="10" data-error="Phone number is required">
+                            </div>
+                            <div class="form-group col-lg-12">
+                               
+                              <span > Please select a job position*</span>
+                              <div class="form-control" >
+                                <select  name="career[job_position]" required="required">
+                                  <option value="Web Developer">Web Developer</option>
+                                  <option value="Web Designer">Web Designer</option>
+                                  <option value="Mobile Developer">Mobile Developer</option>
+                                  <option value="Mobile+Web Developer">Mobile+Web Developer</option>
+                                  <option value="Internet Marketing Expert">Internet Marketing Expert</option>
+                                  <option value="SEO Analyst">SEO Analyst</option>
+                                  <option value="Content Writer">Content Writer</option>
+                                  <option value="Multi-Talented">Multi-Talented</option>
+                                </select>
+                                <div class="dropDownSelect2"></div>
+                              </div>
+                            </div>
+
+                            <div class="form-group col-lg-12">
+                              <span > Your work experience*</span>
+                              <div class="form-control">
+                                <select class="js-select2" name="career[work_experience]" required="required">
+                                  <option value="1 year"> 1 year</option>
+                                  <option value="2 years"> 2 years</option>
+                                  <option value="3 years">3 years</option>
+                                  <option value="4 years">4 years</option>
+                                  <option value="5 years">5 years</option>
+                                  <option value="5+ years">5+ years</option>
+                                </select>
+                                <div class="dropDownSelect2"></div>
+                              </div>
+                            </div>
+                            <div class="form-group col-lg-12">
+                              <span > Technologies*</span>
+                              <div class="form-control">
+
+                                <select  name="career[technologies]" required="required">
+                                  <option value="Android/Ios">Android/Ios</option>
+                                  <option value="React/Redux Native"> React/Redux Native</option>
+                                  <option value="Python/Djnago/Flask">Python/Djnago/Flask</option>
+                                  <option value="Ruby On Rails">Ruby On Rails</option>
+                                  <option value="WordPress/PHP">WordPress/PHP</option>
+                                  <option value="Angular/React/Backbone/Vue Js frameworks">Angular/React/Backbone/Vue Js frameworks</option>
+                                  <option value="Node/Express Js">Node/Express Js</option>
+                                  <option value="Multi-Technologies">Multi-Technologies</option>
+
+                                </select>
+                                <div class="dropDownSelect2"></div>
+                              </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                              <span >Upload Resume*</span>
+                              <input type="file" name="career[resume_file]" required="required" accept="application/pdf">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="submit" value="submit" class="read_btn submit_btn2 form-control">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </form>
     </div>
-  </div>
+</section>
 
-
-<script src="/assets/select2.min.js"></script>
-  <script>
-    $(".js-select2").each(function(){
-      $(this).select2({
-      
-      });
-    })
-  </script>
-<!--===============================================================================================-->
-  
-<!--===============================================================================================-->
-  <script src="/assets/main_con.js"></script>
