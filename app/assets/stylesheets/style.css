@@ -480,6 +480,20 @@ i:before {
   position: relative;
   min-height: 400px;
 }
+.banner_area_career{
+  background: url(../assets/career3.jpg) no-repeat scroll center center ;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.82);
+  background-size: cover;
+  position: relative;
+  min-height: 400px;
+}
+.banner_area_cv{
+  background: url(../assets/cv1.jpg) no-repeat scroll center center ;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.82);
+  background-size: cover;
+  position: relative;
+  /*min-height: 400px;*/
+}
 .banner_area:before {
   content: "";
   background: rgba(4, 8, 29, 0.7);
