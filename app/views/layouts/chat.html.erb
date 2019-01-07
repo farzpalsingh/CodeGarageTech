@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : 'ActionCable Chat' %></title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%#= javascript_include_tag :jquery, :jquery_ujs %>
+    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <link href="/assets/rooms.scss" rel="stylesheet">
+    <link href="/assets/conversations.scss" rel="stylesheet">
+    <link href="/assets/messages.scss" rel="stylesheet">
+    <link href="/assets/chat_room.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css"/>
+    <script src="/assets/cable.js"></script>
+    <script src="/assets/channels/room.coffee"></script>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

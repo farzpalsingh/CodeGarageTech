@@ -1,7 +1,6 @@
 class PortfoliosController < ApplicationController
 	load_and_authorize_resource
 	def new
-		# debugger
 		@portfolio = Portfolio.new()
 	end
 

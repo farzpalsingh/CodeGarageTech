@@ -1,0 +1,28 @@
+<!-- <p class="chat-feedback">Your partner is typing…</p> -->
+<% if @conversation.present? %>
+    <%#= form_for [@conversation, @conversation.messages.new], remote: true do |f| %>
+        <%#= f.text_area :body, class: "input-box_text" %>
+        <%#= f.submit "Send", class: "btn btn-success" %>
+    <%# end %>
+    <% address = request.remote_ip %>
+    <% anonymous_user = User.find_by(ip_address: address) %>
+    <form class="new_message">
+        <input name="conversation_id" type="hidden" value="<%= @conversation.id %>">
+        <input name="user_id" type="hidden" value="<%= anonymous_user.id %>">
+        <textarea name="body" class="form-control input-box_text"></textarea>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+<% else %>
+    <!-- <a href="javascript:void(0)" class="btn btn-primary">Get Started</a> -->
+    <%= link_to 'Get Started', conversations_path, remote: true, method: :post, class: 'btn btn-primary' %>
+<% end %>
+
+<!-- <form action="#" method="post">
+
+    <fieldset>
+        
+        <input type="text" placeholder="Type your message…"  id="message_input" autofocus>
+
+    </fieldset>
+
+</form> -->

@@ -1,0 +1,52 @@
+<script src="/assets/jquery-3.2.1.min.js"></script>
+<div class="liveChatSec">
+    <div class="live-chat-open">
+        <a href="javascript:;" id="live-chat-anchor"><img src="/assets/speech-bubble.png" alt="" /></a>
+    </div>
+    <div id="live-chat" style="display: none">
+        <header class="clearfix">
+            <a href="#" class="chat-close">x</a>
+            <h4><%= request.remote_ip %></h4>
+            <span class="chat-message-counter">3</span>
+        </header>
+        <div class="chat">
+            <div class="chat-history" id="messages_list">
+                <% if @conversation.present? %>
+                    <%= render 'conversations/conversation', conversation: @conversation %>
+                <% else %>
+                <% end %>
+            </div> <!-- end chat-history -->
+            <div class="chatInput">
+                <% if @conversation.present? %>
+                    <% address = request.remote_ip %>
+                    <% anonymous_user = User.find_by(ip_address: address) %>
+                    <form class="new_message">
+                        <input name="conversation_id" type="hidden" value="<%= @conversation.id %>">
+                        <input name="user_id" type="hidden" value="<%= anonymous_user.id %>">
+                        <textarea name="body" class="form-control input-box_text" id="tetx"></textarea>
+                        <input type="submit" class="btn btn-success" value="Send">
+                    </form>
+                <% else %>
+                    <%= link_to 'Get Started', conversations_path, remote: true, method: :post, class: 'btn btn-primary' %>
+                <% end %>
+            </div>
+        </div> <!-- end chat -->
+    </div> <!-- end live-chat -->
+</div>
+<script type="text/javascript">
+    (function() {
+        $('.chat-close').on('click', function(e) {
+            e.preventDefault();
+            $('#live-chat').slideUp(400, function(){
+                $(".live-chat-open").fadeIn("fast");
+            });
+        });
+        $('#live-chat-anchor').on('click', function() {
+            $(".live-chat-open").fadeOut("fast", function(){
+                $('#live-chat').slideDown(400);
+                scrollHeight = $("#messages_list").find(".message-history-inn").height();
+                $("#messages_list").scrollTop(scrollHeight);
+            });
+        });
+    }) ();
+</script>

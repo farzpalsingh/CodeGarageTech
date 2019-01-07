@@ -1,0 +1,7 @@
+var conversation = $('#messages_list').find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
+conversation.append("<%= j(render 'messages/message', message: @message) %>");
+<% if current_user.present? %>
+	$('#messages_list').find('.input-box_text').val('');
+<% else %>
+	$('.chatInput').find('.input-box_text').val('');
+<% end %>

@@ -1,0 +1,15 @@
+var conversations = $('#messages_list');
+conversations.find(".message-history-inn").hide();
+var conversation = conversations.find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
+if (conversation.length !== 1) {
+  conversations.append("<%= j(render 'conversations/conversation', conversation: @conversation) %>");
+  conversation = conversations.find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
+}
+<% if !current_user.present? %>
+	<% if @conversation.present? %>
+		$('.chatInput').html("<%= j(render 'rooms/message_box') %>")
+	<% end %>
+<% end %>
+conversation.show(); 
+var height = conversation.height();
+conversation.parent().scrollTop(height);

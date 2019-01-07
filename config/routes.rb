@@ -8,10 +8,17 @@ Rails.application.routes.draw do
 
   # devise_for :admins
   devise_for :admins, :skip => [:registrations], :controllers => {confirmations: 'confirmations', sessions: 'admins/sessions' }
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'home#index'
   resources :portfolios
   # resources :blogs
-  root 'home#index'
+  get 'rooms/index'
+  get 'rooms/show'=>'rooms#show'
+  resources :conversations, only: [:create] do
+    resources :messages, only: [:create]
+  end
+  # resources :conversations
   get '/work/project-detail/:id'=>'portfolios#show', as: 'portfolio_show'
   post "/work/update-project-details" =>"portfolios#update_portfolio", as: "update_project_details"
   get 'work/project-detail-ucview'=>'home#project_detail1'
@@ -23,7 +30,5 @@ Rails.application.routes.draw do
   post '/contact/create' => 'contacts#create'
   get '/careers' => 'careers#new'
   post '/create_career'=>'careers#create'
-  get '*a', :to => 'errors#not_found'
-  
-
+  get '*a', :to => 'errors#not_found'  
 end

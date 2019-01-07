@@ -17,13 +17,10 @@ class Ability
     #   end
     
         # user ||= Admin.new
-        # debugger
         # Define User abilities
         # if user
-        #     debugger
         #   can :manage, :all
         # else
-        #     debugger
         #   # can :read, Portfolio
         # end
     #

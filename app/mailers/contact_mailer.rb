@@ -7,7 +7,6 @@ class ContactMailer < ApplicationMailer
 	end
 
 	def resume_to_hr(resume_details,resume_url)
-		# debugger
 		@resume_details = resume_details
 		attachments['Resume.pdf'] = File.read(resume_url)
 		mail(:to=>"info@codegaragetech.com,service@codegaragetech.com",:subject=>"Resume Details")
@@ -16,7 +15,6 @@ class ContactMailer < ApplicationMailer
 	end
 
 	# def resume_to_hr(resume_details,resume_url)
-	# 	# debugger
 	# 	@resume_details = resume_details
 	# 	attachments['Resume.pdf'] = File.read(resume_url)
 	# 	mail(:to=>"info@codegaragetech.com",:subject=>"Resume Details")

@@ -1,0 +1,74 @@
+<!-- <h1>ActionCable Chat</h1>
+<%# if user_signed_in? %>
+  <%#= link_to('Logout', destroy_user_session_path, method: :delete) %>
+<%# else %>
+  <%#= link_to('Login', new_user_session_path)  %>  
+<%# end %>
+<div id="messages">
+	<%#= render @messages %>
+</div>
+<input type="text" class="input-box_text" id="message_input"/> -->
+<!-- <link href="/assets/rooms.scss" rel="stylesheet">
+<link href="/assets/conversations.scss" rel="stylesheet">
+<link href="/assets/messages.scss" rel="stylesheet"> -->
+<script src="/assets/jquery-3.2.1.min.js"></script>
+<div class="liveChatSec">
+    <div class="live-chat-open">
+        <a href="javascript:;" id="live-chat-anchor"><img src="/assets/speech-bubble.png" alt="" /></a>
+    </div>
+    <div id="live-chat" style="display: none">
+    
+        <header class="clearfix">
+            
+            <a href="#" class="chat-close">x</a>
+
+            <h4><%= request.remote_ip %></h4>
+
+            <span class="chat-message-counter">3</span>
+
+        </header>
+
+        <div class="chat">
+            
+            <div class="chat-history" id="messages_list">
+                
+                <%#= render @messages %>
+                <% if @conversation.present? %>
+                    <%= render 'conversations/conversation', conversation: @conversation %>
+                <% else %>
+
+                <% end %>
+
+            </div> <!-- end chat-history -->
+
+            <div class="chatInput">
+                <%= render 'message_box' %>
+            </div>
+
+        </div> <!-- end chat -->
+
+    </div> <!-- end live-chat -->
+</div>
+<script type="text/javascript">
+    (function() {
+
+        $('.chat-close').on('click', function(e) {
+
+            e.preventDefault();
+            $('#live-chat').slideUp(400, function(){
+                $(".live-chat-open").fadeIn("fast");
+            });
+
+        });
+
+        $('#live-chat-anchor').on('click', function() {
+            $(".live-chat-open").fadeOut("fast", function(){
+                $('#live-chat').slideDown(400);
+                scrollHeight = $("#messages_list").find(".message-history-inn").height();
+                $("#messages_list").scrollTop(scrollHeight);
+            });
+            
+        });
+
+    }) ();
+</script>

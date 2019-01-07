@@ -1,0 +1,5 @@
+<li class="channel">
+  <%= link_to conversations_path(user_id: anonymous_user), remote: true, method: :post, class: 'channel_name' do %>
+    <span class="unread">20</span><span class="channelIpAddress"><%= anonymous_user.ip_address %></span>
+  <% end %>
+</li>

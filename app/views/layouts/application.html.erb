@@ -25,6 +25,7 @@
 
 	    <title>CodeGarageTech</title>
 	    <%= csrf_meta_tags %>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 	    <link href="/assets/font-awesome.min.css" rel="stylesheet">
         <!-- <link href="/assets/leegant_style.css" rel="stylesheet"> -->
         <link href="/assets/themify-icons.css" rel="stylesheet">
@@ -47,7 +48,11 @@
         <script src="/assets/jquery-3.2.1.min.js"></script>
 
         <script src="/assets/notify.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <link href="/assets/rooms.scss" rel="stylesheet">
+        <link href="/assets/conversations.scss" rel="stylesheet">
+        <link href="/assets/messages.scss" rel="stylesheet">
+        <link href="/assets/chat_room.css" rel="stylesheet">
         
 	    <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -389,6 +394,11 @@
         <script src="/assets/script.js"></script>
 
         <script src="/assets/theme.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" type="text/css"/>
+        <script src="/assets/cable.js"></script>
+        <script src="/assets/channels/room.coffee"></script>
         <script type="text/javascript">
             $('.service_item_inner_slider').owlCarousel({
                 // loop:true,

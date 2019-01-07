@@ -1,0 +1,18 @@
+<div class="chat-message clearfix <%= message.user.user_type == "anonymous_user" ? "alt" : "" %>">
+                    
+    <img src="http://www.piachievers.com/img/users-male-2.png" alt="" width="32" height="32">
+
+    <div class="chat-message-content clearfix">
+        
+        <span class="chat-time"><%= message.created_at.strftime("%I:%M%p") %></span>
+        <% if message.user.user_type == "anonymous_user" %>
+        	<h5><%= message.user.ip_address %></h5>
+        <% elsif message.user.user_type == "admin" %>
+        	<h5>Admin</h5>
+        <% end %>            	
+
+        <p><%= message.body %></p>
+
+    </div> <!-- end chat-message-content -->
+
+</div> <!-- end chat-message -->

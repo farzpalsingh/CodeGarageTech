@@ -1,0 +1,36 @@
+<% if current_user.present? && (current_user.user_type == "admin") %>
+	<div class="message-history-inn" id="messages" data-conversation-id="<%= conversation.id %>" style="display: none;">
+		<div class="footer">
+		  <div class="user-menu">
+		    <span class="user-menu_profile-pic"></span><span class="user-menu_username"><%= current_user.email %></span>
+		    <span class="connection_status">online</span>
+		    <span class="logout"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></span>
+		  </div>
+		  <div class="input-box">
+		    <form class="new_message">
+		        <input name="conversation_id" type="hidden" value="<%= conversation.id %>">
+		        <input name="user_id" type="hidden" value="<%= current_user.id %>">
+		        <textarea name="body" id="carry_message" class="form-control input-box_text"></textarea>
+		        <input type="submit" id="send_message" class="btn btn-success" value="Send">
+		        <!-- <input type="button" id="send_message" onclick="sendMessage()"  class="btn btn-success" value="Send"> -->
+		    </form>
+		  </div>
+		</div>
+		<%= render 'conversations/conversation_content', messages: conversation.messages %>  
+
+	</div>
+	
+<% else %>
+	<div class="message-history-inn" id="messages" data-conversation-id="<%= conversation.id %>">
+		<%= render 'conversations/conversation_content', messages: conversation.messages %>
+	</div>
+<% end %>
+<!-- <script type="text/javascript">
+	function sendMessage(){
+		messagebody = $("#carry_message").val()
+		if (messagebody){
+			$("#send_message").attr("disabled","True")
+			$(".new_message").submit()
+		}	
+	}
+</script> -->
